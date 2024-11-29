@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
-  <TalendProperties:Project xmi:id="_5V1sUKyeEe-VpodfYcQw_A" label="TMC-Demo2" description="" language="java" technicalLabel="TMC_DEMO2" author="_a10kwqyMEe-Zo-skSEIMBQ" productVersion="Talend Cloud Data Fabric-8.0.1.20230913_0925-patch" url="{&quot;commitLogPattern&quot;:&quot;{0}&quot;,&quot;location&quot;:&quot;https://github.com/hamano-talend/tmc-demo2.git&quot;,&quot;settings&quot;:&quot;000&quot;,&quot;storage&quot;:&quot;git&quot;}" type="DQ" itemsRelationVersion="1.3" bigData="false">
-    <migrationTask xmi:id="_5V_dUKyeEe-VpodfYcQw_A" id="org.talend.repository.model.migration.CheckProductVersionMigrationTask" breaks="7.1.0" version="7.1.1"/>
-  </TalendProperties:Project>
-  <TalendProperties:User xmi:id="_a10kwqyMEe-Zo-skSEIMBQ" login="masakihamano@masaki_hamano" firstName="Masaki" lastName="Hamano" type="DQ"/>
-</xmi:XMI>
