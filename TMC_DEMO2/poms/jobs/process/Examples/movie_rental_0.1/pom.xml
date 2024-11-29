@@ -6,7 +6,7 @@
     <groupId>org.example.tmc_demo2</groupId>
     <artifactId>code.Master</artifactId>
     <version>8.0.1</version>
-    <relativePath>../../../</relativePath>
+    <relativePath>../../../../</relativePath>
   </parent>
   <groupId>org.example.tmc_demo2.service</groupId>
   <artifactId>movie_rental</artifactId>
@@ -21,15 +21,15 @@
     <talend.job.folder></talend.job.folder>
     <talend.job.context>Default</talend.job.context>
     <talend.job.path>tmc_demo2</talend.job.path>
-    <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <talend.job.git.commit.id></talend.job.git.commit.id>
+    <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <resources.path>${basedir}/src/main/resources</resources.path>
     <item.project.name>@ItemProjectName@</item.project.name>
     <bundle.config.export.package>@BundleConfigExportPackage@</bundle.config.export.package>
     <talend.job.stat>true</talend.job.stat>
     <talend.job.git.author></talend.job.git.author>
     <item.name>@ItemName@</item.name>
-    <talend.job.jvmargs>-Xms256M -Xmx1024M -Dfile.encoding=UTF-8 </talend.job.jvmargs>
+    <talend.job.jvmargs>-Xms256M -Xmx1024M -Dfile.encoding=UTF-8</talend.job.jvmargs>
     <talend.job.id>_9PYYwHikEeqZN5fwy26K9Q</talend.job.id>
     <talend.job.version>0.1</talend.job.version>
     <talend.job.framework></talend.job.framework>
