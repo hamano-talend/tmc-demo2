@@ -32,7 +32,30 @@
     "version" : "Latest",
     "type" : "routine"
   }, {
-    "id" : "DataOperation",
+    "id" : "DataQuality",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "DataQualityDependencies",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "DqStringHandling",
+    "version" : "Latest",
+    "type" : "routine"
+  } ]
+}, {
+  "baseItem" : {
+    "id" : "_Zr8ogFkREei8HMEx_QibGA",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "DQTechnical",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "DataMasking",
     "version" : "Latest",
     "type" : "routine"
   }, {
@@ -48,39 +71,11 @@
     "version" : "Latest",
     "type" : "routine"
   }, {
-    "id" : "Mathematical",
+    "id" : "IpaasFileUtil",
     "version" : "Latest",
     "type" : "routine"
   }, {
-    "id" : "Numeric",
-    "version" : "Latest",
-    "type" : "routine"
-  }, {
-    "id" : "Relational",
-    "version" : "Latest",
-    "type" : "routine"
-  }, {
-    "id" : "SQLike",
-    "version" : "Latest",
-    "type" : "routine"
-  }, {
-    "id" : "StringHandling",
-    "version" : "Latest",
-    "type" : "routine"
-  }, {
-    "id" : "TalendDataGenerator",
-    "version" : "Latest",
-    "type" : "routine"
-  }, {
-    "id" : "TalendDate",
-    "version" : "Latest",
-    "type" : "routine"
-  }, {
-    "id" : "TalendString",
-    "version" : "Latest",
-    "type" : "routine"
-  }, {
-    "id" : "TalendStringUtil",
+    "id" : "MDM",
     "version" : "Latest",
     "type" : "routine"
   } ]
@@ -98,53 +93,6 @@
     "id" : "built-in",
     "version" : "Latest",
     "type" : "context"
-  } ]
-}, {
-  "baseItem" : {
-    "id" : "_hI8K0KybEe-VpodfYcQw_A",
-    "version" : "0.1",
-    "type" : "job"
-  },
-  "relatedItems" : [ {
-    "id" : "DataOperation",
-    "version" : "Latest",
-    "type" : "routine"
-  }, {
-    "id" : "Mathematical",
-    "version" : "Latest",
-    "type" : "routine"
-  }, {
-    "id" : "Numeric",
-    "version" : "Latest",
-    "type" : "routine"
-  }, {
-    "id" : "Relational",
-    "version" : "Latest",
-    "type" : "routine"
-  }, {
-    "id" : "SQLike",
-    "version" : "Latest",
-    "type" : "routine"
-  }, {
-    "id" : "StringHandling",
-    "version" : "Latest",
-    "type" : "routine"
-  }, {
-    "id" : "TalendDataGenerator",
-    "version" : "Latest",
-    "type" : "routine"
-  }, {
-    "id" : "TalendDate",
-    "version" : "Latest",
-    "type" : "routine"
-  }, {
-    "id" : "TalendString",
-    "version" : "Latest",
-    "type" : "routine"
-  }, {
-    "id" : "TalendStringUtil",
-    "version" : "Latest",
-    "type" : "routine"
   } ]
 }, {
   "baseItem" : {
@@ -169,10 +117,6 @@
     "version" : "Latest",
     "type" : "routine"
   }, {
-    "id" : "DataOperation",
-    "version" : "Latest",
-    "type" : "routine"
-  }, {
     "id" : "DataQuality",
     "version" : "Latest",
     "type" : "routine"
@@ -182,42 +126,6 @@
     "type" : "routine"
   }, {
     "id" : "DqStringHandling",
-    "version" : "Latest",
-    "type" : "routine"
-  }, {
-    "id" : "Mathematical",
-    "version" : "Latest",
-    "type" : "routine"
-  }, {
-    "id" : "Numeric",
-    "version" : "Latest",
-    "type" : "routine"
-  }, {
-    "id" : "Relational",
-    "version" : "Latest",
-    "type" : "routine"
-  }, {
-    "id" : "SQLike",
-    "version" : "Latest",
-    "type" : "routine"
-  }, {
-    "id" : "StringHandling",
-    "version" : "Latest",
-    "type" : "routine"
-  }, {
-    "id" : "TalendDataGenerator",
-    "version" : "Latest",
-    "type" : "routine"
-  }, {
-    "id" : "TalendDate",
-    "version" : "Latest",
-    "type" : "routine"
-  }, {
-    "id" : "TalendString",
-    "version" : "Latest",
-    "type" : "routine"
-  }, {
-    "id" : "TalendStringUtil",
     "version" : "Latest",
     "type" : "routine"
   } ]
