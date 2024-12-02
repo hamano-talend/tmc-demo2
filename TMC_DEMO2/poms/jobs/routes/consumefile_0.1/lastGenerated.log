@@ -1,0 +1,70 @@
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/C:/Talend/8.0.1/studio/plugins/org.eclipse.m2e.maven.runtime.slf4j.simple_1.18.0.20210402-1458/jars/slf4j-simple-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [file:/C:/Talend/8.0.1/studio/configuration/org.eclipse.osgi/1160/0/.cp/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.SimpleLoggerFactory]
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.example.tmc_demo2.route:ConsumeFile:jar:0.1.0
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.apache.camel:camel-core-xml:jar -> duplicate declaration of version 3.20.6 @ line 874, column 17
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for org.example.tmc_demo2.route:ConsumeFile-MicSvc:pom:0.1.0
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: org.apache.camel:camel-core-xml:jar -> duplicate declaration of version 3.20.6 @ line 839, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] TMC_DEMO2 ConsumeFile-0.1.0 (0.1,Routes) Microservice Jar          [jar]
+[INFO] TMC_DEMO2 ConsumeFile-0.1.0 (0.1,Routes) Microservice Aggregator   [pom]
+[INFO] 
+[INFO] --------------< org.example.tmc_demo2.route:ConsumeFile >---------------
+[INFO] Building TMC_DEMO2 ConsumeFile-0.1.0 (0.1,Routes) Microservice Jar 0.1.0 [1/2]
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- builder-maven-plugin:8.0.12:generate (default) @ ConsumeFile ---
+[INFO] Skipping ci-builder
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ ConsumeFile ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 7 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:compile (default-compile) @ ConsumeFile ---
+[INFO] Not compiling main sources
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ ConsumeFile ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.1:testCompile (default-testCompile) @ ConsumeFile ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ ConsumeFile ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.0.2:jar (default-jar) @ ConsumeFile ---
+[INFO] Building jar: C:\Talend\8.0.1\studio\workspace\.repositories\389041486\main\TMC_DEMO2\poms\jobs\routes\consumefile_0.1\target\consumefile_0_1.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.7.15:repackage (default) @ ConsumeFile ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- maven-assembly-plugin:3.6.0:single (default) @ ConsumeFile ---
+[INFO] Reading assembly descriptor: C:\Talend\8.0.1\studio\workspace\.repositories\389041486\main\TMC_DEMO2\poms\jobs\routes\consumefile_0.1/src/main/assemblies/assembly.xml
+[INFO] Building zip: C:\Talend\8.0.1\studio\workspace\.repositories\389041486\main\TMC_DEMO2\poms\jobs\routes\consumefile_0.1\target\consumefile_0_1.zip
+[INFO] 
+[INFO] -----------< org.example.tmc_demo2.route:ConsumeFile-MicSvc >-----------
+[INFO] Building TMC_DEMO2 ConsumeFile-0.1.0 (0.1,Routes) Microservice Aggregator 0.1.0 [2/2]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for TMC_DEMO2 ConsumeFile-0.1.0 (0.1,Routes) Microservice Aggregator 0.1.0:
+[INFO] 
+[INFO] TMC_DEMO2 ConsumeFile-0.1.0 (0.1,Routes) Microservice Jar SUCCESS [  8.516 s]
+[INFO] TMC_DEMO2 ConsumeFile-0.1.0 (0.1,Routes) Microservice Aggregator SUCCESS [  0.000 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.792 s
+[INFO] Finished at: 2024-11-29T09:47:47Z
+[INFO] ------------------------------------------------------------------------
