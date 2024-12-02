@@ -113,15 +113,16 @@
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" show="false" value="aHR0cC1zdHVkaW8jSFRUUCNDbGllbnQ"/>
     <elementParameter field="TEXT" name="LABEL" value="getIDs"/>
     <elementParameter field="TEXT" name="configuration.dataset.datastore.base" value="https://api.ap.cloud.talend.com/tmc/v2.6"/>
-    <elementParameter field="CLOSED_LIST" name="configuration.dataset.datastore.authentication.type" value="OAuth20"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataset.datastore.authentication.type" value="Bearer"/>
+    <elementParameter field="PASSWORD" name="configuration.dataset.datastore.authentication.bearerToken" value="enc:system.encryption.key.v1:B6hyHIFNl7BloX4fuf2O1XUZPfXBcHhjI4DBe85vl3vElj72uS1NXEQf4pscCEgTa125SKmJqflt/8I6PUbysyp1UVNTeTqgM8Ox8+IqPluz89zBuKDkQ3Z0H1qg6Q=="/>
     <elementParameter field="CLOSED_LIST" name="configuration.dataset.datastore.authentication.apiKey.destination" show="false" value="HEADERS"/>
     <elementParameter field="TEXT" name="configuration.dataset.datastore.authentication.apiKey.headerName" show="false" value="Authorization"/>
     <elementParameter field="TEXT" name="configuration.dataset.datastore.authentication.apiKey.queryName" show="false" value="apikey"/>
     <elementParameter field="TEXT" name="configuration.dataset.datastore.authentication.apiKey.prefix" show="false" value="Bearer"/>
     <elementParameter field="PASSWORD" name="configuration.dataset.datastore.authentication.apiKey.token" show="false" value="enc:system.encryption.key.v1:vdoXqBzVf/un7CiCmwPDygCzru+4Rqo5otuac4ujEuGsLr3dx3lmpEBzrsf/Qz4lQbsLYYQaISLFhBkDRQBHX6bT/tkHFGZU5VyYJAf77ADrci9QKadMiV7UlXr1mA=="/>
-    <elementParameter field="CLOSED_LIST" name="configuration.dataset.datastore.authentication.oauth20.flow" value="CLIENT_CREDENTIAL"/>
-    <elementParameter field="CLOSED_LIST" name="configuration.dataset.datastore.authentication.oauth20.authenticationType" value="FORM"/>
-    <elementParameter field="TABLE" name="configuration.dataset.datastore.authentication.oauth20.scopes"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataset.datastore.authentication.oauth20.flow" show="false" value="CLIENT_CREDENTIAL"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataset.datastore.authentication.oauth20.authenticationType" show="false" value="FORM"/>
+    <elementParameter field="TABLE" name="configuration.dataset.datastore.authentication.oauth20.scopes" show="false"/>
     <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataset.methodType" value="GET"/>
     <elementParameter field="TEXT" name="configuration.dataset.resource" value="/workspaces"/>
     <elementParameter field="CHECK" name="configuration.dataset.hasPathParams" value="false"/>
@@ -261,13 +262,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_43acb8df-a053-4976-8dcb-fbe7700a0f94"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>MdoozFKGX6zfliRvf4dfMz690hqOzUyFD7ZeirEYEPKSyqKE0b+BbW0WE1u8NjD+EVU5lLskO/mA&#13;
-UlijenNpGw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_fe0f3b7f-a16b-46bb-854d-2ac4092d6686"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>zMrGGZi0oB9akwkDTSwx9BKUGfe5n1herAU1k0h+9r19wnROLicE0pgkI1YRogo2tF/CNFc92kOi&#13;
-kkrNQiSkbA==</DigestValue></Reference></SignedInfo><SignatureValue>o6WXKvKAi5xBUiMUIyvPvQeKZcwdLEL7xC9hHxMrY193qnaM7i/Xaf4uXvRjo0Q97zPE7+UuMN5U&#13;
-vM9hof5Ki9QtX3AFNVjBi2B+CD2OIwrhSSAeM9nWx0wFCJVZYMSSSqcNkgp5KfsebiSg8cjeESZn&#13;
-k5VDqMuLiNMVCY6y8F2p7/lXwKVQyG2FEQLwdWeElM5ln2b1wEWYe9x0C3cT3SoEg5qoB7s68EFS&#13;
-1cCLdpDDMyWMwc+asKqGbLb/yO336vqtE0QIJj771F3R+uQZEpsiMvwOxzmMEXBDMfd5RoV9wG6b&#13;
-Wkqcnj63Fu5lH6FgJJl6wH99yfT31ovqT2Xa4w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_387eee25-b05d-48d5-8c8a-a4ecaa6ba159"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>WJqVqQwX6PjK2quvUXvl2FA1ojK7d847DHO8iURg8271Bp8bLwUyTZKJH8uqJCWKbxIC41wZaAOu&#13;
+9Ae28SRn4A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_dd6da576-e394-4a7b-806f-53a1f070947a"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZgMpdAtLj4qC293cat4dRC239+fpuEy8nkb/413UHp6X6V/HU8zQZbJk/pimAuVu75ay3ROp3P4m&#13;
+bwPeTtqr9A==</DigestValue></Reference></SignedInfo><SignatureValue>NAxn4nRDDvQAfQlFfmgzD3/sfCKGYSsdsUkyNRwufTw186HC0edIdbNEczcSfaDlyHvOe36jOXVb&#13;
+lEUsGFcVh23ty7bq0A5ms4QtP0507uT0YaBXnQeotR+JWdxOdQJARxabS2WrMjz/7VMBHDrhukom&#13;
+7rS9Y1VB/5D7DnRgujZGAgEKXvNptGWQ49mA9mNmA9eT62FCQxEqS5ukswoo3j2PSxOWmL+Gi12y&#13;
+OpLX8BLgEEJdYyMoxkDkDpbnVtoKHihAiQvrzzx+ObCR9VmVsxBd/cVQT2GWKC+hRDOEV09v7qOb&#13;
+o2G1pUnWvvU4AkbHfDj8Q7fak7o5T1EYFHkb4Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -289,4 +290,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_fe0f3b7f-a16b-46bb-854d-2ac4092d6686" Target="#_43acb8df-a053-4976-8dcb-fbe7700a0f94"><Timestamp>2024-12-02 08:39:27</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_dd6da576-e394-4a7b-806f-53a1f070947a" Target="#_387eee25-b05d-48d5-8c8a-a4ecaa6ba159"><Timestamp>2024-12-02 08:41:05</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
