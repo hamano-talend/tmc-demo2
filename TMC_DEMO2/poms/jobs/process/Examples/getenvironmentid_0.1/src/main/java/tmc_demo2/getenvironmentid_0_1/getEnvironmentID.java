@@ -1221,7 +1221,7 @@ public class getEnvironmentID implements TalendJob {
 
 		mdcInfo.forEach(org.slf4j.MDC::put);
 		org.slf4j.MDC.put("_subJobName", "tHTTPClient_1");
-		org.slf4j.MDC.put("_subJobPid", "Ldx8nw_" + subJobPidCounter.getAndIncrement());
+		org.slf4j.MDC.put("_subJobPid", "K6TzWo_" + subJobPidCounter.getAndIncrement());
 
 		String iterateId = "";
 
@@ -1535,31 +1535,14 @@ public class getEnvironmentID implements TalendJob {
 									+ "https://api.ap.cloud.talend.com/tmc/v2.6");
 							log4jParamters_tHTTPClient_1.append(" | ");
 							log4jParamters_tHTTPClient_1
-									.append("configuration.dataset.datastore.authentication.type" + " = " + "OAuth20");
+									.append("configuration.dataset.datastore.authentication.type" + " = " + "Bearer");
 							log4jParamters_tHTTPClient_1.append(" | ");
 							log4jParamters_tHTTPClient_1
-									.append("configuration.dataset.datastore.authentication.oauth20.flow" + " = "
-											+ "CLIENT_CREDENTIAL");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1
-									.append("configuration.dataset.datastore.authentication.oauth20.authenticationType"
-											+ " = " + "FORM");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1
-									.append("configuration.dataset.datastore.authentication.oauth20.tokenEndpoint"
-											+ " = " + "");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1.append(
-									"configuration.dataset.datastore.authentication.oauth20.clientId" + " = " + "");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1.append(
-									"configuration.dataset.datastore.authentication.oauth20.clientSecret" + " = "
-											+ String.valueOf(routines.system.PasswordEncryptUtil.encryptPassword(""))
+									.append("configuration.dataset.datastore.authentication.bearerToken" + " = "
+											+ String.valueOf(
+													"enc:routine.encryption.key.v1:MBLn2MO9Ewa7f/UiwmeHKCSurSv964i/scBHQ39rPEOc/43dJU3nSZ2shiBW9BnNDTngw7i6PZZQQ2Igzl5QN8XAwIzYEj31t36VqkqSXf5LM0Mpxa3JSSBGTWc=")
 													.substring(0, 4)
 											+ "...");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1.append(
-									"configuration.dataset.datastore.authentication.oauth20.scopes" + " = " + "[]");
 							log4jParamters_tHTTPClient_1.append(" | ");
 							log4jParamters_tHTTPClient_1.append("configuration.dataset.methodType" + " = " + "GET");
 							log4jParamters_tHTTPClient_1.append(" | ");
@@ -1653,7 +1636,7 @@ public class getEnvironmentID implements TalendJob {
 				final java.util.Map<String, String> registry_metadata_tHTTPClient_1 = new java.util.HashMap<>();
 				configuration_tHTTPClient_1.put("configuration.dataset.datastore.base",
 						"https://api.ap.cloud.talend.com/tmc/v2.6");
-				configuration_tHTTPClient_1.put("configuration.dataset.datastore.authentication.type", "OAuth20");
+				configuration_tHTTPClient_1.put("configuration.dataset.datastore.authentication.type", "Bearer");
 				// configuration.dataset.datastore.authentication.basic.username is hidden,
 				// skipping.
 				// configuration.dataset.datastore.authentication.basic.password is hidden,
@@ -1662,8 +1645,9 @@ public class getEnvironmentID implements TalendJob {
 				// skipping.
 				// configuration.dataset.datastore.authentication.ntlm.password is hidden,
 				// skipping.
-				// configuration.dataset.datastore.authentication.bearerToken is hidden,
-				// skipping.
+				configuration_tHTTPClient_1.put("configuration.dataset.datastore.authentication.bearerToken",
+						routines.system.PasswordEncryptUtil.decryptPassword(
+								"enc:routine.encryption.key.v1:YefWzxPuTfzqwZNYRAVHaDBgd4WX5Xuc5P+XciZn8NraXAtzfYCg30jxrbHfyzHZstUNvwhsdGecPapzvsfQaVcESqPVdMK9RM/kT6Fl5teJCiCird/6ScXxuKA="));
 				// configuration.dataset.datastore.authentication.apiKey.destination is hidden,
 				// skipping.
 				// configuration.dataset.datastore.authentication.apiKey.headerName is hidden,
@@ -1674,13 +1658,16 @@ public class getEnvironmentID implements TalendJob {
 				// skipping.
 				// configuration.dataset.datastore.authentication.apiKey.token is hidden,
 				// skipping.
-				configuration_tHTTPClient_1.put("configuration.dataset.datastore.authentication.oauth20.flow",
-						"CLIENT_CREDENTIAL");
-				configuration_tHTTPClient_1
-						.put("configuration.dataset.datastore.authentication.oauth20.authenticationType", "FORM");
-				configuration_tHTTPClient_1.put("configuration.dataset.datastore.authentication.oauth20.tokenEndpoint",
-						"");
-				configuration_tHTTPClient_1.put("configuration.dataset.datastore.authentication.oauth20.clientId", "");
+				// configuration.dataset.datastore.authentication.oauth20.flow is hidden,
+				// skipping.
+				// configuration.dataset.datastore.authentication.oauth20.authenticationType is
+				// hidden, skipping.
+				// configuration.dataset.datastore.authentication.oauth20.tokenEndpoint is
+				// hidden, skipping.
+				// configuration.dataset.datastore.authentication.oauth20.clientId is hidden,
+				// skipping.
+				// configuration.dataset.datastore.authentication.oauth20.clientSecret is
+				// hidden, skipping.
 				configuration_tHTTPClient_1.put("configuration.dataset.methodType", "GET");
 				configuration_tHTTPClient_1.put("configuration.dataset.resource", "/workspaces");
 				configuration_tHTTPClient_1.put("configuration.dataset.hasPathParams", "false");
@@ -2176,7 +2163,7 @@ public class getEnvironmentID implements TalendJob {
 
 		mdcInfo.forEach(org.slf4j.MDC::put);
 		org.slf4j.MDC.put("_subJobName", "talendJobLog");
-		org.slf4j.MDC.put("_subJobPid", "E4KaUk_" + subJobPidCounter.getAndIncrement());
+		org.slf4j.MDC.put("_subJobPid", "3cmEPo_" + subJobPidCounter.getAndIncrement());
 
 		String iterateId = "";
 
@@ -2531,7 +2518,7 @@ public class getEnvironmentID implements TalendJob {
 		org.slf4j.MDC.put("_startTimestamp", java.time.ZonedDateTime.now(java.time.ZoneOffset.UTC)
 				.format(java.time.format.DateTimeFormatter.ISO_INSTANT));
 		org.slf4j.MDC.put("_jobRepositoryId", "_1hXIQLCHEe-kcMyE6M_qOg");
-		org.slf4j.MDC.put("_compiledAtTimestamp", "2024-12-02T08:39:36.773008100Z");
+		org.slf4j.MDC.put("_compiledAtTimestamp", "2024-12-02T08:41:08.995293100Z");
 
 		java.lang.management.RuntimeMXBean mx = java.lang.management.ManagementFactory.getRuntimeMXBean();
 		String[] mxNameTable = mx.getName().split("@"); //$NON-NLS-1$
@@ -2897,6 +2884,6 @@ public class getEnvironmentID implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 100058 characters generated by Talend Cloud Data Fabric on the December 2,
- * 2024 at 8:39:36 AM GMT
+ * 99276 characters generated by Talend Cloud Data Fabric on the December 2,
+ * 2024 at 8:41:08 AM GMT
  ************************************************************************************************/

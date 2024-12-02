@@ -19,7 +19,7 @@
     <talend.job.folder>examples/</talend.job.folder>
     <talend.job.context>Default</talend.job.context>
     <talend.job.path>tmc_demo2</talend.job.path>
-    <talend.job.git.commit.id>2480ef94da46bfa440b4fbad5e1419f3bb889bf0</talend.job.git.commit.id>
+    <talend.job.git.commit.id>8589b91d5360c1c84f5201edbe475075af002355</talend.job.git.commit.id>
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <talend.job.stat>true</talend.job.stat>
     <talend.job.git.author>masaki.hamano@qlik.com</talend.job.git.author>
@@ -39,7 +39,7 @@
     <talend.product.version>8.0.1.20230913_0925-patch</talend.product.version>
     <talend.project.name>TMC_DEMO2</talend.project.name>
     <current.test.resources.dir>${basedir}/src/test/resources</current.test.resources.dir>
-    <talend.job.git.commit.date>1733128772000</talend.job.git.commit.date>
+    <talend.job.git.commit.date>1733128866000</talend.job.git.commit.date>
     <project.distribution-management.repository.url>${project.distributionManagement.repository.url}</project.distribution-management.repository.url>
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
     <talend.job.name>getEnvironmentID</talend.job.name>
