@@ -111,8 +111,9 @@
   <node componentName="HTTPClient" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="128" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHTTPClient_1"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" show="false" value="aHR0cC1zdHVkaW8jSFRUUCNDbGllbnQ"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="getIDs"/>
-    <elementParameter field="TEXT" name="configuration.dataset.datastore.base" value="https://api.us.cloud.talend.com/tmc/v2.6"/>
+    <elementParameter field="TEXT" name="configuration.dataset.datastore.base" value="https://api.ap.cloud.talend.com/tmc/v2.6"/>
     <elementParameter field="CLOSED_LIST" name="configuration.dataset.datastore.authentication.type" value="APIKey"/>
     <elementParameter field="PASSWORD" name="configuration.dataset.datastore.authentication.bearerToken" show="false" value="enc:system.encryption.key.v1:B6hyHIFNl7BloX4fuf2O1XUZPfXBcHhjI4DBe85vl3vElj72uS1NXEQf4pscCEgTa125SKmJqflt/8I6PUbysyp1UVNTeTqgM8Ox8+IqPluz89zBuKDkQ3Z0H1qg6Q=="/>
     <elementParameter field="CLOSED_LIST" name="configuration.dataset.datastore.authentication.apiKey.destination" value="HEADERS"/>
@@ -181,6 +182,7 @@
   </node>
   <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFilterRow_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
     <elementParameter field="TABLE" name="CONDITIONS">
       <elementValue elementRef="INPUT_COLUMN" value="environmentName"/>
@@ -218,6 +220,7 @@
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="384" posY="96">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
@@ -249,26 +252,141 @@
       <column comment="" key="false" length="-1" name="environmentID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
+  <node componentName="HTTPClient" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="128" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHTTPClient_2"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" show="false" value="aHR0cC1zdHVkaW8jSFRUUCNDbGllbnQ"/>
+    <elementParameter field="TEXT" name="LABEL" value="getIDs"/>
+    <elementParameter field="TEXT" name="configuration.dataset.datastore.base" value="https://api.ap.cloud.talend.com/tmc/v2.6"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataset.datastore.authentication.type" value="APIKey"/>
+    <elementParameter field="PASSWORD" name="configuration.dataset.datastore.authentication.bearerToken" show="false" value="enc:system.encryption.key.v1:gOOOah8mz3qlOoSZ6jQeOXKTpG0nbldcJKbfF0TAQWZ9Xga5Ac0yERYQK5RnYHMFv5llEItZ5yx5sSPoM3ldoTyknjRqtwfs5UVk2mZdu3ukBLVX/IzxX84G68Sajw=="/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataset.datastore.authentication.apiKey.destination" value="HEADERS"/>
+    <elementParameter field="TEXT" name="configuration.dataset.datastore.authentication.apiKey.headerName" value="Authorization"/>
+    <elementParameter field="TEXT" name="configuration.dataset.datastore.authentication.apiKey.queryName" show="false" value="apikey"/>
+    <elementParameter field="TEXT" name="configuration.dataset.datastore.authentication.apiKey.prefix" value="Bearer"/>
+    <elementParameter field="PASSWORD" name="configuration.dataset.datastore.authentication.apiKey.token" value="enc:system.encryption.key.v1:4P2SeDCxOW6+ae2UZNBEam9maz3hIoH3pI0/hPryxw/8YpOUTt9WLGhVq8seBkZNnphRfMEeN+7iNZQx9OM15qJtro79R/CvgRSoAXOmKt7bbEH+XdFUHqy90pMOdQ=="/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataset.datastore.authentication.oauth20.flow" show="false" value="CLIENT_CREDENTIAL"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataset.datastore.authentication.oauth20.authenticationType" show="false" value="FORM"/>
+    <elementParameter field="TABLE" name="configuration.dataset.datastore.authentication.oauth20.scopes" show="false"/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataset.methodType" value="GET"/>
+    <elementParameter field="TEXT" name="configuration.dataset.resource" value="/workspaces"/>
+    <elementParameter field="CHECK" name="configuration.dataset.hasPathParams" value="false"/>
+    <elementParameter field="TABLE" name="configuration.dataset.pathParams" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dataset.hasQueryParams" value="false"/>
+    <elementParameter field="TABLE" name="configuration.dataset.queryParams" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dataset.hasHeaders" value="false"/>
+    <elementParameter field="TABLE" name="configuration.dataset.headers" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dataset.hasBody" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataset.body.type" show="false" value="TEXT"/>
+    <elementParameter field="TABLE" name="configuration.dataset.body.params" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataset.format" value="JSON"/>
+    <elementParameter field="TEXT" name="configuration.dataset.dssl" value=".root"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataset.returnedContent" value="STATUS_HEADERS_BODY"/>
+    <elementParameter field="CHECK" name="configuration.dataset.outputKeyValuePairs" value="false"/>
+    <elementParameter field="CHECK" name="configuration.dataset.forwardInput" show="false" value="false"/>
+    <elementParameter field="TABLE" name="configuration.dataset.keyValuePairs" show="false">
+      <elementValue elementRef="configuration.dataset.keyValuePairs[].key" value="&quot;workspaceName&quot;"/>
+      <elementValue elementRef="configuration.dataset.keyValuePairs[].value" value="&quot;{.response.name}&quot;"/>
+      <elementValue elementRef="configuration.dataset.keyValuePairs[].key" value="&quot;workspaceID&quot;"/>
+      <elementValue elementRef="configuration.dataset.keyValuePairs[].value" value="&quot;{.response.id}&quot;"/>
+      <elementValue elementRef="configuration.dataset.keyValuePairs[].key" value="&quot;environmentName&quot;"/>
+      <elementValue elementRef="configuration.dataset.keyValuePairs[].value" value="&quot;{.response.environment.name}&quot;"/>
+      <elementValue elementRef="configuration.dataset.keyValuePairs[].key" value="&quot;environmentID&quot;"/>
+      <elementValue elementRef="configuration.dataset.keyValuePairs[].value" value="&quot;{.response.environment.id}&quot;"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="configuration.downloadFile" value="false"/>
+    <elementParameter field="TEXT" name="configuration.dataset.datastore.connectionTimeout" value="30000"/>
+    <elementParameter field="TEXT" name="configuration.dataset.datastore.receiveTimeout" value="120000"/>
+    <elementParameter field="CHECK" name="configuration.dataset.datastore.bypassCertificateValidation" value="false"/>
+    <elementParameter field="CHECK" name="configuration.dataset.datastore.useProxy" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataset.datastore.proxyType" show="false" value="HTTP"/>
+    <elementParameter field="TEXT" name="configuration.dataset.datastore.proxyPort" show="false" value="443"/>
+    <elementParameter field="CHECK" name="configuration.dataset.acceptRedirections" value="true"/>
+    <elementParameter field="TEXT" name="configuration.dataset.maxRedirectOnSameURL" value="3"/>
+    <elementParameter field="CHECK" name="configuration.dataset.onlySameHost" value="false"/>
+    <elementParameter field="CHECK" name="configuration.dataset.hasPagination" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataset.pagination.strategy" show="false" value="OFFSET_LIMIT"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataset.pagination.offsetLimitStrategyConfig.location" show="false" value="QUERY_PARAMETERS"/>
+    <elementParameter field="CHECK" name="configuration.dataset.jsonForceDouble" value="true"/>
+    <elementParameter field="CHECK" name="configuration.dataset.enforceNumberAsString" show="false" value="true"/>
+    <elementParameter field="CHECK" name="configuration.uploadFiles" value="false"/>
+    <elementParameter field="TABLE" name="configuration.uploadFileTable" show="false"/>
+    <elementParameter field="CHECK" name="configuration.dieOnError" value="false"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataset.__version" show="false" value="1"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataset.datastore.__version" show="false" value="1"/>
+    <metadata connector="LOOKUP" name="LOOKUP"/>
+    <metadata connector="MERGE" name="MERGE"/>
+    <metadata connector="REJECT" name="REJECT"/>
+    <metadata connector="FLOW" name="tHTTPClient_2">
+      <column comment="" key="false" length="-1" name="workspaceName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="workspaceID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="environmentName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="environmentID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="256" posY="224">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_2"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="workspaceName"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="workspaceID"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="environmentName"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="environmentID"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogRow_2">
+      <column comment="" key="false" length="-1" name="workspaceName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="workspaceID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="environmentName" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="environmentID" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tHTTPClient_1" offsetLabelX="0" offsetLabelY="0" source="tHTTPClient_1" target="tFilterRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
   <connection connectorName="FILTER" label="row2" lineStyle="0" metaname="FILTER" offsetLabelX="0" offsetLabelY="0" source="tFilterRow_1" target="tLogRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tHTTPClient_2" offsetLabelX="0" offsetLabelY="0" source="tHTTPClient_2" target="tLogRow_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHTTPClient_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8ab66a69-6847-4e8d-8a65-72a6ca01dc3b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>p4T/Eq3o8BdD6Js6pxBGC5iW3NY/a7UuzFXdTkEVKl/xWyzWYvfpJl67fXo48jwecm8lHuDfCZBW&#13;
-CDVv0mB7Fg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_1a9c978d-7dac-478e-82cd-0b73cbda4908"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>tCebl2xX610JGvpLhwJatZpB3zAm70g9I/28CJKJucu7vQ0BU6xGGntTwcL+IxU2ePUEDIb2U8Lw&#13;
-YM2yQR+Yiw==</DigestValue></Reference></SignedInfo><SignatureValue>mPIeLfQxwrZWDQ3dtohd80ma2TMNvHlIjQW4KkE5bvcIYxeboFvNYDYS71VFBj81+IPHQRZoMrKt&#13;
-DCpzIuzDA3MF7AjRNYYEhqxpJ1cQychJLxm0nTkKzhjLRwmqJagbEfHCjOjIqIJ8MIc7I+Lfh8tX&#13;
-nOmczMVUFWP1qdZhbPYUHVfD+OQQHPF9HZXxuEKmvV2H9+FMR0Gg4ne7xskhvMWcvlDv9LAbiAHd&#13;
-DqmOs1jMT47BbTP7jQDhzja3yvSOf1QSYULNXUObXumxQF2W/Q/Cm2ajJVk3lPtJSKFOqjjDe0hV&#13;
-Wib2/mihSy+FlkC9rqOBMtyrusiaMOv+fZg8oA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tHTTPClient_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_4ef78b13-6298-460c-b76d-0481ce1c1da5"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>u+VHhFH/Xok5Pb486lkGfWxiB11cYqp3shAJ2U3wo1l24tBJ0R35kjGBmFfDHSnOT9ujZl6W/kAU&#13;
+6W7YSm6UJA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_72a5c95a-7171-4b6b-bd7f-f5b9b9df6a7c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>JmSF45QFgm7ha6i3l86DfPPjXX1XCtCBzj6y61ipK2nx1VAz14Mk9tDnufYE85r+NJ7xpmfHfX+O&#13;
+UldI0U+8Hg==</DigestValue></Reference></SignedInfo><SignatureValue>jQHgEDuoVu7xN57HgGSi/W6z6y+8icZ+g/ZnBtoL/qc0hRXSd4IX7DmzQvk9eQQmKzjEk8EVjdko&#13;
+CqPLZ0gRDvdsRScM8SijWUtWLNP+oHq0JybqhxiYZjTWMy7p23VY7kAzP88/eADnSgxymm030Ds0&#13;
+i76ics/+JUVpvHpSnoBY89bJJt/C7cTneoEcb+V2fiPczi912dgAdrsWBuA23zC3vGurpv/6sxqS&#13;
+z5jdLopNzztHhT/hjkti06xFdGa9ge2e6zAaIoEdAJqgisU23kW+KQUrcafsgjNnrEPtJyQ8I3FR&#13;
+yN07GTzllsZ8bPEcskKcsjoqj5YN5abybM/qGA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -290,4 +408,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_1a9c978d-7dac-478e-82cd-0b73cbda4908" Target="#_8ab66a69-6847-4e8d-8a65-72a6ca01dc3b"><Timestamp>2024-12-02 08:42:53</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_72a5c95a-7171-4b6b-bd7f-f5b9b9df6a7c" Target="#_4ef78b13-6298-460c-b76d-0481ce1c1da5"><Timestamp>2024-12-02 08:46:44</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
