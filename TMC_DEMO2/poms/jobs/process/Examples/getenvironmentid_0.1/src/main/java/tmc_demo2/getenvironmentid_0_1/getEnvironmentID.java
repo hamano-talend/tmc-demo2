@@ -778,7 +778,7 @@ public class getEnvironmentID implements TalendJob {
 
 		mdcInfo.forEach(org.slf4j.MDC::put);
 		org.slf4j.MDC.put("_subJobName", "tHTTPClient_2");
-		org.slf4j.MDC.put("_subJobPid", "uhp4pu_" + subJobPidCounter.getAndIncrement());
+		org.slf4j.MDC.put("_subJobPid", "npCOxT_" + subJobPidCounter.getAndIncrement());
 
 		String iterateId = "";
 
@@ -900,7 +900,7 @@ public class getEnvironmentID implements TalendJob {
 							log4jParamters_tHTTPClient_2
 									.append("configuration.dataset.datastore.authentication.apiKey.token" + " = "
 											+ String.valueOf(
-													"enc:routine.encryption.key.v1:3teThgW6d5yZ8MvQRNv0WNj7ROZ6QigQmDBgoYW73TJfF96PJ30WehsARGgcHjmdnmm3H4/8KLcWhIpi2gGKGe860XmaaL3uUApikg5fmdlrPBn4wq+xhGpkxZA=")
+													"enc:routine.encryption.key.v1:ObZmA6WuYhW4ozSy5GCPnipIynlNVIZCBMPMiuDBY4p8Gd3kuIgkLH/cyumC1FZtn3PgQLa6C+MDl4+2cPiJqS+LVmOBUL5T735diBj3JmtgaXN3NXwJRlqio80=")
 													.substring(0, 4)
 											+ "...");
 							log4jParamters_tHTTPClient_2.append(" | ");
@@ -919,9 +919,7 @@ public class getEnvironmentID implements TalendJob {
 							log4jParamters_tHTTPClient_2.append(" | ");
 							log4jParamters_tHTTPClient_2.append("configuration.dataset.hasBody" + " = " + "false");
 							log4jParamters_tHTTPClient_2.append(" | ");
-							log4jParamters_tHTTPClient_2.append("configuration.dataset.format" + " = " + "JSON");
-							log4jParamters_tHTTPClient_2.append(" | ");
-							log4jParamters_tHTTPClient_2.append("configuration.dataset.dssl" + " = " + ".root");
+							log4jParamters_tHTTPClient_2.append("configuration.dataset.format" + " = " + "RAW_TEXT");
 							log4jParamters_tHTTPClient_2.append(" | ");
 							log4jParamters_tHTTPClient_2
 									.append("configuration.dataset.returnedContent" + " = " + "STATUS_HEADERS_BODY");
@@ -953,9 +951,6 @@ public class getEnvironmentID implements TalendJob {
 							log4jParamters_tHTTPClient_2.append(" | ");
 							log4jParamters_tHTTPClient_2
 									.append("configuration.dataset.hasPagination" + " = " + "false");
-							log4jParamters_tHTTPClient_2.append(" | ");
-							log4jParamters_tHTTPClient_2
-									.append("configuration.dataset.jsonForceDouble" + " = " + "true");
 							log4jParamters_tHTTPClient_2.append(" | ");
 							log4jParamters_tHTTPClient_2.append("configuration.uploadFiles" + " = " + "false");
 							log4jParamters_tHTTPClient_2.append(" | ");
@@ -1003,7 +998,7 @@ public class getEnvironmentID implements TalendJob {
 						"Bearer");
 				configuration_tHTTPClient_2.put("configuration.dataset.datastore.authentication.apiKey.token",
 						routines.system.PasswordEncryptUtil.decryptPassword(
-								"enc:routine.encryption.key.v1:Jb/+XTAOyTVnT6kkgAXLpLZYjRVQ//0EqXxp8KK2IpxCkk4QHILr+Wq5XwxxE2hGs37fZmb9D+fTDLGGZm+W3tepp6ERIBy3hqRPVybuKPrbOrnv+eedE1yGb2s="));
+								"enc:routine.encryption.key.v1:hL9XdvYIhqYCzm39Kb+5K148psLY3umNGfGSkOzX6r98MetQozNphNYJ9z4sCVj44ibFKUpTqxztK62WnyqXd9NiMc0gOERu4bZQIbwdxzQ3C0L2m3PApC5EZi0="));
 				// configuration.dataset.datastore.authentication.oauth20.flow is hidden,
 				// skipping.
 				// configuration.dataset.datastore.authentication.oauth20.authenticationType is
@@ -1024,8 +1019,8 @@ public class getEnvironmentID implements TalendJob {
 				// configuration.dataset.body.textValue is hidden, skipping.
 				// configuration.dataset.body.jsonValue is hidden, skipping.
 				// configuration.dataset.body.xmlValue is hidden, skipping.
-				configuration_tHTTPClient_2.put("configuration.dataset.format", "JSON");
-				configuration_tHTTPClient_2.put("configuration.dataset.dssl", ".root");
+				configuration_tHTTPClient_2.put("configuration.dataset.format", "RAW_TEXT");
+				// configuration.dataset.dssl is hidden, skipping.
 				configuration_tHTTPClient_2.put("configuration.dataset.returnedContent", "STATUS_HEADERS_BODY");
 				configuration_tHTTPClient_2.put("configuration.dataset.outputKeyValuePairs", "false");
 				// configuration.dataset.forwardInput is hidden, skipping.
@@ -1068,7 +1063,7 @@ public class getEnvironmentID implements TalendJob {
 				// hidden, skipping.
 				// configuration.dataset.pagination.offsetLimitStrategyConfig.elementsPath is
 				// hidden, skipping.
-				configuration_tHTTPClient_2.put("configuration.dataset.jsonForceDouble", "true");
+				// configuration.dataset.jsonForceDouble is hidden, skipping.
 				// configuration.dataset.enforceNumberAsString is hidden, skipping.
 				configuration_tHTTPClient_2.put("configuration.uploadFiles", "false");
 				configuration_tHTTPClient_2.put("configuration.dieOnError", "false");
@@ -1387,7 +1382,7 @@ public class getEnvironmentID implements TalendJob {
 
 		mdcInfo.forEach(org.slf4j.MDC::put);
 		org.slf4j.MDC.put("_subJobName", "talendJobLog");
-		org.slf4j.MDC.put("_subJobPid", "ghYudj_" + subJobPidCounter.getAndIncrement());
+		org.slf4j.MDC.put("_subJobPid", "qyLnZl_" + subJobPidCounter.getAndIncrement());
 
 		String iterateId = "";
 
@@ -1742,7 +1737,7 @@ public class getEnvironmentID implements TalendJob {
 		org.slf4j.MDC.put("_startTimestamp", java.time.ZonedDateTime.now(java.time.ZoneOffset.UTC)
 				.format(java.time.format.DateTimeFormatter.ISO_INSTANT));
 		org.slf4j.MDC.put("_jobRepositoryId", "_1hXIQLCHEe-kcMyE6M_qOg");
-		org.slf4j.MDC.put("_compiledAtTimestamp", "2024-12-02T08:46:46.765934Z");
+		org.slf4j.MDC.put("_compiledAtTimestamp", "2024-12-02T08:47:37.764428700Z");
 
 		java.lang.management.RuntimeMXBean mx = java.lang.management.ManagementFactory.getRuntimeMXBean();
 		String[] mxNameTable = mx.getName().split("@"); //$NON-NLS-1$
@@ -2108,6 +2103,6 @@ public class getEnvironmentID implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 78224 characters generated by Talend Cloud Data Fabric on the December 2,
- * 2024 at 8:46:46 AM GMT
+ * 77810 characters generated by Talend Cloud Data Fabric on the December 2,
+ * 2024 at 8:47:37 AM GMT
  ************************************************************************************************/
