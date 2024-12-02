@@ -292,34 +292,24 @@ public class getEnvironmentID implements TalendJob {
 		}
 	}
 
-	public void tHTTPClient_1_error(Exception exception, String errorComponent,
+	public void tHTTPClient_2_error(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap) throws TalendException {
 
 		end_Hash.put(errorComponent, System.currentTimeMillis());
 
 		status = "failure";
 
-		tHTTPClient_1_onSubJobError(exception, errorComponent, globalMap);
+		tHTTPClient_2_onSubJobError(exception, errorComponent, globalMap);
 	}
 
-	public void tFilterRow_1_error(Exception exception, String errorComponent,
+	public void tLogRow_2_error(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap) throws TalendException {
 
 		end_Hash.put(errorComponent, System.currentTimeMillis());
 
 		status = "failure";
 
-		tHTTPClient_1_onSubJobError(exception, errorComponent, globalMap);
-	}
-
-	public void tLogRow_1_error(Exception exception, String errorComponent,
-			final java.util.Map<String, Object> globalMap) throws TalendException {
-
-		end_Hash.put(errorComponent, System.currentTimeMillis());
-
-		status = "failure";
-
-		tHTTPClient_1_onSubJobError(exception, errorComponent, globalMap);
+		tHTTPClient_2_onSubJobError(exception, errorComponent, globalMap);
 	}
 
 	public void talendJobLog_error(Exception exception, String errorComponent,
@@ -332,7 +322,7 @@ public class getEnvironmentID implements TalendJob {
 		talendJobLog_onSubJobError(exception, errorComponent, globalMap);
 	}
 
-	public void tHTTPClient_1_onSubJobError(Exception exception, String errorComponent,
+	public void tHTTPClient_2_onSubJobError(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap) throws TalendException {
 
 		resumeUtil.addLog("SYSTEM_LOG", "NODE:" + errorComponent, "", Thread.currentThread().getId() + "", "FATAL", "",
@@ -348,7 +338,7 @@ public class getEnvironmentID implements TalendJob {
 
 	}
 
-	public static class row2Struct implements routines.system.IPersistableRow<row2Struct> {
+	public static class row3Struct implements routines.system.IPersistableRow<row3Struct> {
 		final static byte[] commonByteArrayLock_TMC_DEMO2_getEnvironmentID = new byte[0];
 		static byte[] commonByteArray_TMC_DEMO2_getEnvironmentID = new byte[0];
 
@@ -751,7 +741,7 @@ public class getEnvironmentID implements TalendJob {
 		/**
 		 * Compare keys
 		 */
-		public int compareTo(row2Struct other) {
+		public int compareTo(row3Struct other) {
 
 			int returnValue = -1;
 
@@ -781,447 +771,14 @@ public class getEnvironmentID implements TalendJob {
 
 	}
 
-	public static class row1Struct implements routines.system.IPersistableRow<row1Struct> {
-		final static byte[] commonByteArrayLock_TMC_DEMO2_getEnvironmentID = new byte[0];
-		static byte[] commonByteArray_TMC_DEMO2_getEnvironmentID = new byte[0];
-
-		public String workspaceName;
-
-		public String getWorkspaceName() {
-			return this.workspaceName;
-		}
-
-		public Boolean workspaceNameIsNullable() {
-			return true;
-		}
-
-		public Boolean workspaceNameIsKey() {
-			return false;
-		}
-
-		public Integer workspaceNameLength() {
-			return null;
-		}
-
-		public Integer workspaceNamePrecision() {
-			return null;
-		}
-
-		public String workspaceNameDefault() {
-
-			return null;
-
-		}
-
-		public String workspaceNameComment() {
-
-			return "";
-
-		}
-
-		public String workspaceNamePattern() {
-
-			return "";
-
-		}
-
-		public String workspaceNameOriginalDbColumnName() {
-
-			return "workspaceName";
-
-		}
-
-		public String workspaceID;
-
-		public String getWorkspaceID() {
-			return this.workspaceID;
-		}
-
-		public Boolean workspaceIDIsNullable() {
-			return true;
-		}
-
-		public Boolean workspaceIDIsKey() {
-			return false;
-		}
-
-		public Integer workspaceIDLength() {
-			return null;
-		}
-
-		public Integer workspaceIDPrecision() {
-			return null;
-		}
-
-		public String workspaceIDDefault() {
-
-			return null;
-
-		}
-
-		public String workspaceIDComment() {
-
-			return "";
-
-		}
-
-		public String workspaceIDPattern() {
-
-			return "";
-
-		}
-
-		public String workspaceIDOriginalDbColumnName() {
-
-			return "workspaceID";
-
-		}
-
-		public String environmentName;
-
-		public String getEnvironmentName() {
-			return this.environmentName;
-		}
-
-		public Boolean environmentNameIsNullable() {
-			return true;
-		}
-
-		public Boolean environmentNameIsKey() {
-			return false;
-		}
-
-		public Integer environmentNameLength() {
-			return null;
-		}
-
-		public Integer environmentNamePrecision() {
-			return null;
-		}
-
-		public String environmentNameDefault() {
-
-			return null;
-
-		}
-
-		public String environmentNameComment() {
-
-			return "";
-
-		}
-
-		public String environmentNamePattern() {
-
-			return "";
-
-		}
-
-		public String environmentNameOriginalDbColumnName() {
-
-			return "environmentName";
-
-		}
-
-		public String environmentID;
-
-		public String getEnvironmentID() {
-			return this.environmentID;
-		}
-
-		public Boolean environmentIDIsNullable() {
-			return true;
-		}
-
-		public Boolean environmentIDIsKey() {
-			return false;
-		}
-
-		public Integer environmentIDLength() {
-			return null;
-		}
-
-		public Integer environmentIDPrecision() {
-			return null;
-		}
-
-		public String environmentIDDefault() {
-
-			return null;
-
-		}
-
-		public String environmentIDComment() {
-
-			return "";
-
-		}
-
-		public String environmentIDPattern() {
-
-			return "";
-
-		}
-
-		public String environmentIDOriginalDbColumnName() {
-
-			return "environmentID";
-
-		}
-
-		private String readString(ObjectInputStream dis) throws IOException {
-			String strReturn = null;
-			int length = 0;
-			length = dis.readInt();
-			if (length == -1) {
-				strReturn = null;
-			} else {
-				if (length > commonByteArray_TMC_DEMO2_getEnvironmentID.length) {
-					if (length < 1024 && commonByteArray_TMC_DEMO2_getEnvironmentID.length == 0) {
-						commonByteArray_TMC_DEMO2_getEnvironmentID = new byte[1024];
-					} else {
-						commonByteArray_TMC_DEMO2_getEnvironmentID = new byte[2 * length];
-					}
-				}
-				dis.readFully(commonByteArray_TMC_DEMO2_getEnvironmentID, 0, length);
-				strReturn = new String(commonByteArray_TMC_DEMO2_getEnvironmentID, 0, length, utf8Charset);
-			}
-			return strReturn;
-		}
-
-		private String readString(org.jboss.marshalling.Unmarshaller unmarshaller) throws IOException {
-			String strReturn = null;
-			int length = 0;
-			length = unmarshaller.readInt();
-			if (length == -1) {
-				strReturn = null;
-			} else {
-				if (length > commonByteArray_TMC_DEMO2_getEnvironmentID.length) {
-					if (length < 1024 && commonByteArray_TMC_DEMO2_getEnvironmentID.length == 0) {
-						commonByteArray_TMC_DEMO2_getEnvironmentID = new byte[1024];
-					} else {
-						commonByteArray_TMC_DEMO2_getEnvironmentID = new byte[2 * length];
-					}
-				}
-				unmarshaller.readFully(commonByteArray_TMC_DEMO2_getEnvironmentID, 0, length);
-				strReturn = new String(commonByteArray_TMC_DEMO2_getEnvironmentID, 0, length, utf8Charset);
-			}
-			return strReturn;
-		}
-
-		private void writeString(String str, ObjectOutputStream dos) throws IOException {
-			if (str == null) {
-				dos.writeInt(-1);
-			} else {
-				byte[] byteArray = str.getBytes(utf8Charset);
-				dos.writeInt(byteArray.length);
-				dos.write(byteArray);
-			}
-		}
-
-		private void writeString(String str, org.jboss.marshalling.Marshaller marshaller) throws IOException {
-			if (str == null) {
-				marshaller.writeInt(-1);
-			} else {
-				byte[] byteArray = str.getBytes(utf8Charset);
-				marshaller.writeInt(byteArray.length);
-				marshaller.write(byteArray);
-			}
-		}
-
-		public void readData(ObjectInputStream dis) {
-
-			synchronized (commonByteArrayLock_TMC_DEMO2_getEnvironmentID) {
-
-				try {
-
-					int length = 0;
-
-					this.workspaceName = readString(dis);
-
-					this.workspaceID = readString(dis);
-
-					this.environmentName = readString(dis);
-
-					this.environmentID = readString(dis);
-
-				} catch (IOException e) {
-					throw new RuntimeException(e);
-
-				}
-
-			}
-
-		}
-
-		public void readData(org.jboss.marshalling.Unmarshaller dis) {
-
-			synchronized (commonByteArrayLock_TMC_DEMO2_getEnvironmentID) {
-
-				try {
-
-					int length = 0;
-
-					this.workspaceName = readString(dis);
-
-					this.workspaceID = readString(dis);
-
-					this.environmentName = readString(dis);
-
-					this.environmentID = readString(dis);
-
-				} catch (IOException e) {
-					throw new RuntimeException(e);
-
-				}
-
-			}
-
-		}
-
-		public void writeData(ObjectOutputStream dos) {
-			try {
-
-				// String
-
-				writeString(this.workspaceName, dos);
-
-				// String
-
-				writeString(this.workspaceID, dos);
-
-				// String
-
-				writeString(this.environmentName, dos);
-
-				// String
-
-				writeString(this.environmentID, dos);
-
-			} catch (IOException e) {
-				throw new RuntimeException(e);
-			}
-
-		}
-
-		public void writeData(org.jboss.marshalling.Marshaller dos) {
-			try {
-
-				// String
-
-				writeString(this.workspaceName, dos);
-
-				// String
-
-				writeString(this.workspaceID, dos);
-
-				// String
-
-				writeString(this.environmentName, dos);
-
-				// String
-
-				writeString(this.environmentID, dos);
-
-			} catch (IOException e) {
-				throw new RuntimeException(e);
-			}
-
-		}
-
-		public String toString() {
-
-			StringBuilder sb = new StringBuilder();
-			sb.append(super.toString());
-			sb.append("[");
-			sb.append("workspaceName=" + workspaceName);
-			sb.append(",workspaceID=" + workspaceID);
-			sb.append(",environmentName=" + environmentName);
-			sb.append(",environmentID=" + environmentID);
-			sb.append("]");
-
-			return sb.toString();
-		}
-
-		public String toLogString() {
-			StringBuilder sb = new StringBuilder();
-
-			if (workspaceName == null) {
-				sb.append("<null>");
-			} else {
-				sb.append(workspaceName);
-			}
-
-			sb.append("|");
-
-			if (workspaceID == null) {
-				sb.append("<null>");
-			} else {
-				sb.append(workspaceID);
-			}
-
-			sb.append("|");
-
-			if (environmentName == null) {
-				sb.append("<null>");
-			} else {
-				sb.append(environmentName);
-			}
-
-			sb.append("|");
-
-			if (environmentID == null) {
-				sb.append("<null>");
-			} else {
-				sb.append(environmentID);
-			}
-
-			sb.append("|");
-
-			return sb.toString();
-		}
-
-		/**
-		 * Compare keys
-		 */
-		public int compareTo(row1Struct other) {
-
-			int returnValue = -1;
-
-			return returnValue;
-		}
-
-		private int checkNullsAndCompare(Object object1, Object object2) {
-			int returnValue = 0;
-			if (object1 instanceof Comparable && object2 instanceof Comparable) {
-				returnValue = ((Comparable) object1).compareTo(object2);
-			} else if (object1 != null && object2 != null) {
-				returnValue = compareStrings(object1.toString(), object2.toString());
-			} else if (object1 == null && object2 != null) {
-				returnValue = 1;
-			} else if (object1 != null && object2 == null) {
-				returnValue = -1;
-			} else {
-				returnValue = 0;
-			}
-
-			return returnValue;
-		}
-
-		private int compareStrings(String string1, String string2) {
-			return string1.compareTo(string2);
-		}
-
-	}
-
-	public void tHTTPClient_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
-		globalMap.put("tHTTPClient_1_SUBPROCESS_STATE", 0);
+	public void tHTTPClient_2Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+		globalMap.put("tHTTPClient_2_SUBPROCESS_STATE", 0);
 
 		final boolean execStat = this.execStat;
 
 		mdcInfo.forEach(org.slf4j.MDC::put);
-		org.slf4j.MDC.put("_subJobName", "tHTTPClient_1");
-		org.slf4j.MDC.put("_subJobPid", "MsdlJr_" + subJobPidCounter.getAndIncrement());
+		org.slf4j.MDC.put("_subJobName", "tHTTPClient_2");
+		org.slf4j.MDC.put("_subJobPid", "uhp4pu_" + subJobPidCounter.getAndIncrement());
 
 		String iterateId = "";
 
@@ -1239,415 +796,193 @@ public class getEnvironmentID implements TalendJob {
 			if (resumeIt || globalResumeTicket) { // start the resume
 				globalResumeTicket = true;
 
-				row1Struct row1 = new row1Struct();
-				row2Struct row2 = new row2Struct();
+				row3Struct row3 = new row3Struct();
 
 				/**
-				 * [tLogRow_1 begin ] start
+				 * [tLogRow_2 begin ] start
 				 */
 
-				ok_Hash.put("tLogRow_1", false);
-				start_Hash.put("tLogRow_1", System.currentTimeMillis());
+				ok_Hash.put("tLogRow_2", false);
+				start_Hash.put("tLogRow_2", System.currentTimeMillis());
 
-				currentComponent = "tLogRow_1";
+				currentComponent = "tLogRow_2";
 
-				runStat.updateStatAndLog(execStat, enableLogStash, resourceMap, iterateId, 0, 0, "row2");
+				runStat.updateStatAndLog(execStat, enableLogStash, resourceMap, iterateId, 0, 0, "row3");
 
-				int tos_count_tLogRow_1 = 0;
+				int tos_count_tLogRow_2 = 0;
 
 				if (log.isDebugEnabled())
-					log.debug("tLogRow_1 - " + ("Start to work."));
+					log.debug("tLogRow_2 - " + ("Start to work."));
 				if (log.isDebugEnabled()) {
-					class BytesLimit65535_tLogRow_1 {
+					class BytesLimit65535_tLogRow_2 {
 						public void limitLog4jByte() throws Exception {
-							StringBuilder log4jParamters_tLogRow_1 = new StringBuilder();
-							log4jParamters_tLogRow_1.append("Parameters:");
-							log4jParamters_tLogRow_1.append("BASIC_MODE" + " = " + "false");
-							log4jParamters_tLogRow_1.append(" | ");
-							log4jParamters_tLogRow_1.append("TABLE_PRINT" + " = " + "true");
-							log4jParamters_tLogRow_1.append(" | ");
-							log4jParamters_tLogRow_1.append("VERTICAL" + " = " + "false");
-							log4jParamters_tLogRow_1.append(" | ");
-							log4jParamters_tLogRow_1.append("PRINT_CONTENT_WITH_LOG4J" + " = " + "true");
-							log4jParamters_tLogRow_1.append(" | ");
+							StringBuilder log4jParamters_tLogRow_2 = new StringBuilder();
+							log4jParamters_tLogRow_2.append("Parameters:");
+							log4jParamters_tLogRow_2.append("BASIC_MODE" + " = " + "true");
+							log4jParamters_tLogRow_2.append(" | ");
+							log4jParamters_tLogRow_2.append("TABLE_PRINT" + " = " + "false");
+							log4jParamters_tLogRow_2.append(" | ");
+							log4jParamters_tLogRow_2.append("VERTICAL" + " = " + "false");
+							log4jParamters_tLogRow_2.append(" | ");
+							log4jParamters_tLogRow_2.append("FIELDSEPARATOR" + " = " + "\"|\"");
+							log4jParamters_tLogRow_2.append(" | ");
+							log4jParamters_tLogRow_2.append("PRINT_HEADER" + " = " + "false");
+							log4jParamters_tLogRow_2.append(" | ");
+							log4jParamters_tLogRow_2.append("PRINT_UNIQUE_NAME" + " = " + "false");
+							log4jParamters_tLogRow_2.append(" | ");
+							log4jParamters_tLogRow_2.append("PRINT_COLNAMES" + " = " + "false");
+							log4jParamters_tLogRow_2.append(" | ");
+							log4jParamters_tLogRow_2.append("USE_FIXED_LENGTH" + " = " + "false");
+							log4jParamters_tLogRow_2.append(" | ");
+							log4jParamters_tLogRow_2.append("PRINT_CONTENT_WITH_LOG4J" + " = " + "true");
+							log4jParamters_tLogRow_2.append(" | ");
 							if (log.isDebugEnabled())
-								log.debug("tLogRow_1 - " + (log4jParamters_tLogRow_1));
+								log.debug("tLogRow_2 - " + (log4jParamters_tLogRow_2));
 						}
 					}
-					new BytesLimit65535_tLogRow_1().limitLog4jByte();
+					new BytesLimit65535_tLogRow_2().limitLog4jByte();
 				}
 				if (enableLogStash) {
-					talendJobLog.addCM("tLogRow_1", "tLogRow_1", "tLogRow");
+					talendJobLog.addCM("tLogRow_2", "tLogRow_2", "tLogRow");
 					talendJobLogProcess(globalMap);
 				}
 
 				///////////////////////
 
-				class Util_tLogRow_1 {
+				final String OUTPUT_FIELD_SEPARATOR_tLogRow_2 = "|";
+				java.io.PrintStream consoleOut_tLogRow_2 = null;
 
-					String[] des_top = { ".", ".", "-", "+" };
-
-					String[] des_head = { "|=", "=|", "-", "+" };
-
-					String[] des_bottom = { "'", "'", "-", "+" };
-
-					String name = "";
-
-					java.util.List<String[]> list = new java.util.ArrayList<String[]>();
-
-					int[] colLengths = new int[4];
-
-					public void addRow(String[] row) {
-
-						for (int i = 0; i < 4; i++) {
-							if (row[i] != null) {
-								colLengths[i] = Math.max(colLengths[i], row[i].length());
-							}
-						}
-						list.add(row);
-					}
-
-					public void setTableName(String name) {
-
-						this.name = name;
-					}
-
-					public StringBuilder format() {
-
-						StringBuilder sb = new StringBuilder();
-
-						sb.append(print(des_top));
-
-						int totals = 0;
-						for (int i = 0; i < colLengths.length; i++) {
-							totals = totals + colLengths[i];
-						}
-
-						// name
-						sb.append("|");
-						int k = 0;
-						for (k = 0; k < (totals + 3 - name.length()) / 2; k++) {
-							sb.append(' ');
-						}
-						sb.append(name);
-						for (int i = 0; i < totals + 3 - name.length() - k; i++) {
-							sb.append(' ');
-						}
-						sb.append("|\n");
-
-						// head and rows
-						sb.append(print(des_head));
-						for (int i = 0; i < list.size(); i++) {
-
-							String[] row = list.get(i);
-
-							java.util.Formatter formatter = new java.util.Formatter(new StringBuilder());
-
-							StringBuilder sbformat = new StringBuilder();
-							sbformat.append("|%1$-");
-							sbformat.append(colLengths[0]);
-							sbformat.append("s");
-
-							sbformat.append("|%2$-");
-							sbformat.append(colLengths[1]);
-							sbformat.append("s");
-
-							sbformat.append("|%3$-");
-							sbformat.append(colLengths[2]);
-							sbformat.append("s");
-
-							sbformat.append("|%4$-");
-							sbformat.append(colLengths[3]);
-							sbformat.append("s");
-
-							sbformat.append("|\n");
-
-							formatter.format(sbformat.toString(), (Object[]) row);
-
-							sb.append(formatter.toString());
-							if (i == 0)
-								sb.append(print(des_head)); // print the head
-						}
-
-						// end
-						sb.append(print(des_bottom));
-						return sb;
-					}
-
-					private StringBuilder print(String[] fillChars) {
-						StringBuilder sb = new StringBuilder();
-						// first column
-						sb.append(fillChars[0]);
-						for (int i = 0; i < colLengths[0] - fillChars[0].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[3]);
-
-						for (int i = 0; i < colLengths[1] - fillChars[3].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[3]);
-						for (int i = 0; i < colLengths[2] - fillChars[3].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[3]);
-
-						// last column
-						for (int i = 0; i < colLengths[3] - fillChars[1].length() + 1; i++) {
-							sb.append(fillChars[2]);
-						}
-						sb.append(fillChars[1]);
-						sb.append("\n");
-						return sb;
-					}
-
-					public boolean isTableEmpty() {
-						if (list.size() > 1)
-							return false;
-						return true;
-					}
-				}
-				Util_tLogRow_1 util_tLogRow_1 = new Util_tLogRow_1();
-				util_tLogRow_1.setTableName("tLogRow_1");
-				util_tLogRow_1
-						.addRow(new String[] { "workspaceName", "workspaceID", "environmentName", "environmentID", });
-				StringBuilder strBuffer_tLogRow_1 = null;
-				int nb_line_tLogRow_1 = 0;
+				StringBuilder strBuffer_tLogRow_2 = null;
+				int nb_line_tLogRow_2 = 0;
 ///////////////////////    			
 
 				/**
-				 * [tLogRow_1 begin ] stop
+				 * [tLogRow_2 begin ] stop
 				 */
 
 				/**
-				 * [tFilterRow_1 begin ] start
+				 * [tHTTPClient_2 begin ] start
 				 */
 
-				ok_Hash.put("tFilterRow_1", false);
-				start_Hash.put("tFilterRow_1", System.currentTimeMillis());
+				ok_Hash.put("tHTTPClient_2", false);
+				start_Hash.put("tHTTPClient_2", System.currentTimeMillis());
 
-				currentComponent = "tFilterRow_1";
-
-				cLabel = "filterWorkspace";
-
-				runStat.updateStatAndLog(execStat, enableLogStash, resourceMap, iterateId, 0, 0, "row1");
-
-				int tos_count_tFilterRow_1 = 0;
-
-				if (log.isDebugEnabled())
-					log.debug("tFilterRow_1 - " + ("Start to work."));
-				if (log.isDebugEnabled()) {
-					class BytesLimit65535_tFilterRow_1 {
-						public void limitLog4jByte() throws Exception {
-							StringBuilder log4jParamters_tFilterRow_1 = new StringBuilder();
-							log4jParamters_tFilterRow_1.append("Parameters:");
-							log4jParamters_tFilterRow_1.append("LOGICAL_OP" + " = " + "&&");
-							log4jParamters_tFilterRow_1.append(" | ");
-							log4jParamters_tFilterRow_1.append("CONDITIONS" + " = " + "[{OPERATOR=" + ("==")
-									+ ", RVALUE=" + ("\"DEV\"") + ", INPUT_COLUMN=" + ("environmentName")
-									+ ", FUNCTION="
-									+ ("$source == null? false : $source.toUpperCase().compareTo($target) $operator 0")
-									+ "}, {OPERATOR=" + ("==") + ", RVALUE=" + ("\"CLOUD_RUN\"") + ", INPUT_COLUMN="
-									+ ("workspaceName") + ", FUNCTION="
-									+ ("$source == null? false : $source.toUpperCase().compareTo($target) $operator 0")
-									+ "}]");
-							log4jParamters_tFilterRow_1.append(" | ");
-							log4jParamters_tFilterRow_1.append("USE_ADVANCED" + " = " + "false");
-							log4jParamters_tFilterRow_1.append(" | ");
-							if (log.isDebugEnabled())
-								log.debug("tFilterRow_1 - " + (log4jParamters_tFilterRow_1));
-						}
-					}
-					new BytesLimit65535_tFilterRow_1().limitLog4jByte();
-				}
-				if (enableLogStash) {
-					talendJobLog.addCM("tFilterRow_1", "filterWorkspace", "tFilterRow");
-					talendJobLogProcess(globalMap);
-				}
-
-				int nb_line_tFilterRow_1 = 0;
-				int nb_line_ok_tFilterRow_1 = 0;
-				int nb_line_reject_tFilterRow_1 = 0;
-
-				class Operator_tFilterRow_1 {
-					private String sErrorMsg = "";
-					private boolean bMatchFlag = true;
-					private String sUnionFlag = "&&";
-
-					public Operator_tFilterRow_1(String unionFlag) {
-						sUnionFlag = unionFlag;
-						bMatchFlag = "||".equals(unionFlag) ? false : true;
-					}
-
-					public String getErrorMsg() {
-						if (sErrorMsg != null && sErrorMsg.length() > 1)
-							return sErrorMsg.substring(1);
-						else
-							return null;
-					}
-
-					public boolean getMatchFlag() {
-						return bMatchFlag;
-					}
-
-					public void matches(boolean partMatched, String reason) {
-						// no need to care about the next judgement
-						if ("||".equals(sUnionFlag) && bMatchFlag) {
-							return;
-						}
-
-						if (!partMatched) {
-							sErrorMsg += "|" + reason;
-						}
-
-						if ("||".equals(sUnionFlag))
-							bMatchFlag = bMatchFlag || partMatched;
-						else
-							bMatchFlag = bMatchFlag && partMatched;
-					}
-				}
-
-				/**
-				 * [tFilterRow_1 begin ] stop
-				 */
-
-				/**
-				 * [tHTTPClient_1 begin ] start
-				 */
-
-				ok_Hash.put("tHTTPClient_1", false);
-				start_Hash.put("tHTTPClient_1", System.currentTimeMillis());
-
-				currentComponent = "tHTTPClient_1";
+				currentComponent = "tHTTPClient_2";
 
 				cLabel = "getIDs";
 
-				int tos_count_tHTTPClient_1 = 0;
+				int tos_count_tHTTPClient_2 = 0;
 
 				if (log.isDebugEnabled())
-					log.debug("tHTTPClient_1 - " + ("Start to work."));
+					log.debug("tHTTPClient_2 - " + ("Start to work."));
 				if (log.isDebugEnabled()) {
-					class BytesLimit65535_tHTTPClient_1 {
+					class BytesLimit65535_tHTTPClient_2 {
 						public void limitLog4jByte() throws Exception {
-							StringBuilder log4jParamters_tHTTPClient_1 = new StringBuilder();
-							log4jParamters_tHTTPClient_1.append("Parameters:");
-							log4jParamters_tHTTPClient_1.append("configuration.dataset.datastore.base" + " = "
-									+ "https://api.us.cloud.talend.com/tmc/v2.6");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1
+							StringBuilder log4jParamters_tHTTPClient_2 = new StringBuilder();
+							log4jParamters_tHTTPClient_2.append("Parameters:");
+							log4jParamters_tHTTPClient_2.append("configuration.dataset.datastore.base" + " = "
+									+ "https://api.ap.cloud.talend.com/tmc/v2.6");
+							log4jParamters_tHTTPClient_2.append(" | ");
+							log4jParamters_tHTTPClient_2
 									.append("configuration.dataset.datastore.authentication.type" + " = " + "APIKey");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1
+							log4jParamters_tHTTPClient_2.append(" | ");
+							log4jParamters_tHTTPClient_2
 									.append("configuration.dataset.datastore.authentication.apiKey.destination" + " = "
 											+ "HEADERS");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1
+							log4jParamters_tHTTPClient_2.append(" | ");
+							log4jParamters_tHTTPClient_2
 									.append("configuration.dataset.datastore.authentication.apiKey.headerName" + " = "
 											+ "Authorization");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1.append(
+							log4jParamters_tHTTPClient_2.append(" | ");
+							log4jParamters_tHTTPClient_2.append(
 									"configuration.dataset.datastore.authentication.apiKey.prefix" + " = " + "Bearer");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1
+							log4jParamters_tHTTPClient_2.append(" | ");
+							log4jParamters_tHTTPClient_2
 									.append("configuration.dataset.datastore.authentication.apiKey.token" + " = "
 											+ String.valueOf(
-													"enc:routine.encryption.key.v1:pDPNWbU0vK/p0OEXTSLSmvBq5vlJwGNjdO6Ln9qLQs7FV1q13famI7TzN6UrbKjUoDM3B8KAhStl32CGKw776YtzHQzguIrsJdGRt9cUzLU9F4Oz2KUehj1t40g=")
+													"enc:routine.encryption.key.v1:3teThgW6d5yZ8MvQRNv0WNj7ROZ6QigQmDBgoYW73TJfF96PJ30WehsARGgcHjmdnmm3H4/8KLcWhIpi2gGKGe860XmaaL3uUApikg5fmdlrPBn4wq+xhGpkxZA=")
 													.substring(0, 4)
 											+ "...");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1.append("configuration.dataset.methodType" + " = " + "GET");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1
+							log4jParamters_tHTTPClient_2.append(" | ");
+							log4jParamters_tHTTPClient_2.append("configuration.dataset.methodType" + " = " + "GET");
+							log4jParamters_tHTTPClient_2.append(" | ");
+							log4jParamters_tHTTPClient_2
 									.append("configuration.dataset.resource" + " = " + "/workspaces");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1
+							log4jParamters_tHTTPClient_2.append(" | ");
+							log4jParamters_tHTTPClient_2
 									.append("configuration.dataset.hasPathParams" + " = " + "false");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1
+							log4jParamters_tHTTPClient_2.append(" | ");
+							log4jParamters_tHTTPClient_2
 									.append("configuration.dataset.hasQueryParams" + " = " + "false");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1.append("configuration.dataset.hasHeaders" + " = " + "false");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1.append("configuration.dataset.hasBody" + " = " + "false");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1.append("configuration.dataset.format" + " = " + "JSON");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1.append("configuration.dataset.dssl" + " = " + ".root");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1
-									.append("configuration.dataset.returnedContent" + " = " + "BODY_ONLY");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1
-									.append("configuration.dataset.outputKeyValuePairs" + " = " + "true");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1.append("configuration.dataset.forwardInput" + " = " + "false");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1.append("configuration.dataset.keyValuePairs" + " = "
-									+ "[{configuration.dataset.keyValuePairs[].key=" + ("\"workspaceName\"")
-									+ ", configuration.dataset.keyValuePairs[].value=" + ("\"{.response.name}\"")
-									+ "}, {configuration.dataset.keyValuePairs[].key=" + ("\"workspaceID\"")
-									+ ", configuration.dataset.keyValuePairs[].value=" + ("\"{.response.id}\"")
-									+ "}, {configuration.dataset.keyValuePairs[].key=" + ("\"environmentName\"")
-									+ ", configuration.dataset.keyValuePairs[].value="
-									+ ("\"{.response.environment.name}\"")
-									+ "}, {configuration.dataset.keyValuePairs[].key=" + ("\"environmentID\"")
-									+ ", configuration.dataset.keyValuePairs[].value="
-									+ ("\"{.response.environment.id}\"") + "}]");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1.append("configuration.downloadFile" + " = " + "false");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1
+							log4jParamters_tHTTPClient_2.append(" | ");
+							log4jParamters_tHTTPClient_2.append("configuration.dataset.hasHeaders" + " = " + "false");
+							log4jParamters_tHTTPClient_2.append(" | ");
+							log4jParamters_tHTTPClient_2.append("configuration.dataset.hasBody" + " = " + "false");
+							log4jParamters_tHTTPClient_2.append(" | ");
+							log4jParamters_tHTTPClient_2.append("configuration.dataset.format" + " = " + "JSON");
+							log4jParamters_tHTTPClient_2.append(" | ");
+							log4jParamters_tHTTPClient_2.append("configuration.dataset.dssl" + " = " + ".root");
+							log4jParamters_tHTTPClient_2.append(" | ");
+							log4jParamters_tHTTPClient_2
+									.append("configuration.dataset.returnedContent" + " = " + "STATUS_HEADERS_BODY");
+							log4jParamters_tHTTPClient_2.append(" | ");
+							log4jParamters_tHTTPClient_2
+									.append("configuration.dataset.outputKeyValuePairs" + " = " + "false");
+							log4jParamters_tHTTPClient_2.append(" | ");
+							log4jParamters_tHTTPClient_2.append("configuration.downloadFile" + " = " + "false");
+							log4jParamters_tHTTPClient_2.append(" | ");
+							log4jParamters_tHTTPClient_2
 									.append("configuration.dataset.datastore.connectionTimeout" + " = " + "30000");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1
+							log4jParamters_tHTTPClient_2.append(" | ");
+							log4jParamters_tHTTPClient_2
 									.append("configuration.dataset.datastore.receiveTimeout" + " = " + "120000");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1.append(
+							log4jParamters_tHTTPClient_2.append(" | ");
+							log4jParamters_tHTTPClient_2.append(
 									"configuration.dataset.datastore.bypassCertificateValidation" + " = " + "false");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1
+							log4jParamters_tHTTPClient_2.append(" | ");
+							log4jParamters_tHTTPClient_2
 									.append("configuration.dataset.datastore.useProxy" + " = " + "false");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1
+							log4jParamters_tHTTPClient_2.append(" | ");
+							log4jParamters_tHTTPClient_2
 									.append("configuration.dataset.acceptRedirections" + " = " + "true");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1
+							log4jParamters_tHTTPClient_2.append(" | ");
+							log4jParamters_tHTTPClient_2
 									.append("configuration.dataset.maxRedirectOnSameURL" + " = " + "3");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1.append("configuration.dataset.onlySameHost" + " = " + "false");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1
+							log4jParamters_tHTTPClient_2.append(" | ");
+							log4jParamters_tHTTPClient_2.append("configuration.dataset.onlySameHost" + " = " + "false");
+							log4jParamters_tHTTPClient_2.append(" | ");
+							log4jParamters_tHTTPClient_2
 									.append("configuration.dataset.hasPagination" + " = " + "false");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1
+							log4jParamters_tHTTPClient_2.append(" | ");
+							log4jParamters_tHTTPClient_2
 									.append("configuration.dataset.jsonForceDouble" + " = " + "true");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1.append("configuration.uploadFiles" + " = " + "false");
-							log4jParamters_tHTTPClient_1.append(" | ");
-							log4jParamters_tHTTPClient_1.append("configuration.dieOnError" + " = " + "false");
-							log4jParamters_tHTTPClient_1.append(" | ");
+							log4jParamters_tHTTPClient_2.append(" | ");
+							log4jParamters_tHTTPClient_2.append("configuration.uploadFiles" + " = " + "false");
+							log4jParamters_tHTTPClient_2.append(" | ");
+							log4jParamters_tHTTPClient_2.append("configuration.dieOnError" + " = " + "false");
+							log4jParamters_tHTTPClient_2.append(" | ");
 							if (log.isDebugEnabled())
-								log.debug("tHTTPClient_1 - " + (log4jParamters_tHTTPClient_1));
+								log.debug("tHTTPClient_2 - " + (log4jParamters_tHTTPClient_2));
 						}
 					}
-					new BytesLimit65535_tHTTPClient_1().limitLog4jByte();
+					new BytesLimit65535_tHTTPClient_2().limitLog4jByte();
 				}
 				if (enableLogStash) {
-					talendJobLog.addCM("tHTTPClient_1", "getIDs", "HTTPClient");
+					talendJobLog.addCM("tHTTPClient_2", "getIDs", "HTTPClient");
 					talendJobLogProcess(globalMap);
 				}
 
-				final org.talend.sdk.component.runtime.manager.ComponentManager mgr_tHTTPClient_1 = org.talend.sdk.component.runtime.manager.ComponentManager
+				final org.talend.sdk.component.runtime.manager.ComponentManager mgr_tHTTPClient_2 = org.talend.sdk.component.runtime.manager.ComponentManager
 						.instance();
-				if (mgr_tHTTPClient_1.getContainer().findAll().isEmpty()) {
-					mgr_tHTTPClient_1.autoDiscoverPlugins(false, true);
+				if (mgr_tHTTPClient_2.getContainer().findAll().isEmpty()) {
+					mgr_tHTTPClient_2.autoDiscoverPlugins(false, true);
 				}
 
-				final java.util.Map<String, String> configuration_tHTTPClient_1 = new java.util.HashMap<>();
-				final java.util.Map<String, String> registry_metadata_tHTTPClient_1 = new java.util.HashMap<>();
-				configuration_tHTTPClient_1.put("configuration.dataset.datastore.base",
-						"https://api.us.cloud.talend.com/tmc/v2.6");
-				configuration_tHTTPClient_1.put("configuration.dataset.datastore.authentication.type", "APIKey");
+				final java.util.Map<String, String> configuration_tHTTPClient_2 = new java.util.HashMap<>();
+				final java.util.Map<String, String> registry_metadata_tHTTPClient_2 = new java.util.HashMap<>();
+				configuration_tHTTPClient_2.put("configuration.dataset.datastore.base",
+						"https://api.ap.cloud.talend.com/tmc/v2.6");
+				configuration_tHTTPClient_2.put("configuration.dataset.datastore.authentication.type", "APIKey");
 				// configuration.dataset.datastore.authentication.basic.username is hidden,
 				// skipping.
 				// configuration.dataset.datastore.authentication.basic.password is hidden,
@@ -1658,17 +993,17 @@ public class getEnvironmentID implements TalendJob {
 				// skipping.
 				// configuration.dataset.datastore.authentication.bearerToken is hidden,
 				// skipping.
-				configuration_tHTTPClient_1.put("configuration.dataset.datastore.authentication.apiKey.destination",
+				configuration_tHTTPClient_2.put("configuration.dataset.datastore.authentication.apiKey.destination",
 						"HEADERS");
-				configuration_tHTTPClient_1.put("configuration.dataset.datastore.authentication.apiKey.headerName",
+				configuration_tHTTPClient_2.put("configuration.dataset.datastore.authentication.apiKey.headerName",
 						"Authorization");
 				// configuration.dataset.datastore.authentication.apiKey.queryName is hidden,
 				// skipping.
-				configuration_tHTTPClient_1.put("configuration.dataset.datastore.authentication.apiKey.prefix",
+				configuration_tHTTPClient_2.put("configuration.dataset.datastore.authentication.apiKey.prefix",
 						"Bearer");
-				configuration_tHTTPClient_1.put("configuration.dataset.datastore.authentication.apiKey.token",
+				configuration_tHTTPClient_2.put("configuration.dataset.datastore.authentication.apiKey.token",
 						routines.system.PasswordEncryptUtil.decryptPassword(
-								"enc:routine.encryption.key.v1:UXaOg6leYUbETFVcr15yFz6sbBcT8cTI8qbVDBIbMRbGk9qT7Q9nH4QDICnqArCvzywXVqQ1k5xC4GM43K2Q7bJtYdit+c2fHW8g/Fo5ValUqQG1rAdPYJXr9q0="));
+								"enc:routine.encryption.key.v1:Jb/+XTAOyTVnT6kkgAXLpLZYjRVQ//0EqXxp8KK2IpxCkk4QHILr+Wq5XwxxE2hGs37fZmb9D+fTDLGGZm+W3tepp6ERIBy3hqRPVybuKPrbOrnv+eedE1yGb2s="));
 				// configuration.dataset.datastore.authentication.oauth20.flow is hidden,
 				// skipping.
 				// configuration.dataset.datastore.authentication.oauth20.authenticationType is
@@ -1679,46 +1014,46 @@ public class getEnvironmentID implements TalendJob {
 				// skipping.
 				// configuration.dataset.datastore.authentication.oauth20.clientSecret is
 				// hidden, skipping.
-				configuration_tHTTPClient_1.put("configuration.dataset.methodType", "GET");
-				configuration_tHTTPClient_1.put("configuration.dataset.resource", "/workspaces");
-				configuration_tHTTPClient_1.put("configuration.dataset.hasPathParams", "false");
-				configuration_tHTTPClient_1.put("configuration.dataset.hasQueryParams", "false");
-				configuration_tHTTPClient_1.put("configuration.dataset.hasHeaders", "false");
-				configuration_tHTTPClient_1.put("configuration.dataset.hasBody", "false");
+				configuration_tHTTPClient_2.put("configuration.dataset.methodType", "GET");
+				configuration_tHTTPClient_2.put("configuration.dataset.resource", "/workspaces");
+				configuration_tHTTPClient_2.put("configuration.dataset.hasPathParams", "false");
+				configuration_tHTTPClient_2.put("configuration.dataset.hasQueryParams", "false");
+				configuration_tHTTPClient_2.put("configuration.dataset.hasHeaders", "false");
+				configuration_tHTTPClient_2.put("configuration.dataset.hasBody", "false");
 				// configuration.dataset.body.type is hidden, skipping.
 				// configuration.dataset.body.textValue is hidden, skipping.
 				// configuration.dataset.body.jsonValue is hidden, skipping.
 				// configuration.dataset.body.xmlValue is hidden, skipping.
-				configuration_tHTTPClient_1.put("configuration.dataset.format", "JSON");
-				configuration_tHTTPClient_1.put("configuration.dataset.dssl", ".root");
-				configuration_tHTTPClient_1.put("configuration.dataset.returnedContent", "BODY_ONLY");
-				configuration_tHTTPClient_1.put("configuration.dataset.outputKeyValuePairs", "true");
-				configuration_tHTTPClient_1.put("configuration.dataset.forwardInput", "false");
-				configuration_tHTTPClient_1.put("configuration.dataset.keyValuePairs[0].key", "workspaceName");
-				configuration_tHTTPClient_1.put("configuration.dataset.keyValuePairs[0].value", "{.response.name}");
-				configuration_tHTTPClient_1.put("configuration.dataset.keyValuePairs[1].key", "workspaceID");
-				configuration_tHTTPClient_1.put("configuration.dataset.keyValuePairs[1].value", "{.response.id}");
-				configuration_tHTTPClient_1.put("configuration.dataset.keyValuePairs[2].key", "environmentName");
-				configuration_tHTTPClient_1.put("configuration.dataset.keyValuePairs[2].value",
+				configuration_tHTTPClient_2.put("configuration.dataset.format", "JSON");
+				configuration_tHTTPClient_2.put("configuration.dataset.dssl", ".root");
+				configuration_tHTTPClient_2.put("configuration.dataset.returnedContent", "STATUS_HEADERS_BODY");
+				configuration_tHTTPClient_2.put("configuration.dataset.outputKeyValuePairs", "false");
+				// configuration.dataset.forwardInput is hidden, skipping.
+				configuration_tHTTPClient_2.put("configuration.dataset.keyValuePairs[0].key", "workspaceName");
+				configuration_tHTTPClient_2.put("configuration.dataset.keyValuePairs[0].value", "{.response.name}");
+				configuration_tHTTPClient_2.put("configuration.dataset.keyValuePairs[1].key", "workspaceID");
+				configuration_tHTTPClient_2.put("configuration.dataset.keyValuePairs[1].value", "{.response.id}");
+				configuration_tHTTPClient_2.put("configuration.dataset.keyValuePairs[2].key", "environmentName");
+				configuration_tHTTPClient_2.put("configuration.dataset.keyValuePairs[2].value",
 						"{.response.environment.name}");
-				configuration_tHTTPClient_1.put("configuration.dataset.keyValuePairs[3].key", "environmentID");
-				configuration_tHTTPClient_1.put("configuration.dataset.keyValuePairs[3].value",
+				configuration_tHTTPClient_2.put("configuration.dataset.keyValuePairs[3].key", "environmentID");
+				configuration_tHTTPClient_2.put("configuration.dataset.keyValuePairs[3].value",
 						"{.response.environment.id}");
-				configuration_tHTTPClient_1.put("configuration.downloadFile", "false");
+				configuration_tHTTPClient_2.put("configuration.downloadFile", "false");
 				// configuration.directoryToSave is hidden, skipping.
-				configuration_tHTTPClient_1.put("configuration.dataset.datastore.connectionTimeout", "30000");
-				configuration_tHTTPClient_1.put("configuration.dataset.datastore.receiveTimeout", "120000");
-				configuration_tHTTPClient_1.put("configuration.dataset.datastore.bypassCertificateValidation", "false");
-				configuration_tHTTPClient_1.put("configuration.dataset.datastore.useProxy", "false");
+				configuration_tHTTPClient_2.put("configuration.dataset.datastore.connectionTimeout", "30000");
+				configuration_tHTTPClient_2.put("configuration.dataset.datastore.receiveTimeout", "120000");
+				configuration_tHTTPClient_2.put("configuration.dataset.datastore.bypassCertificateValidation", "false");
+				configuration_tHTTPClient_2.put("configuration.dataset.datastore.useProxy", "false");
 				// configuration.dataset.datastore.proxyType is hidden, skipping.
 				// configuration.dataset.datastore.proxyHost is hidden, skipping.
 				// configuration.dataset.datastore.proxyPort is hidden, skipping.
 				// configuration.dataset.datastore.proxyLogin is hidden, skipping.
 				// configuration.dataset.datastore.proxyPassword is hidden, skipping.
-				configuration_tHTTPClient_1.put("configuration.dataset.acceptRedirections", "true");
-				configuration_tHTTPClient_1.put("configuration.dataset.maxRedirectOnSameURL", "3");
-				configuration_tHTTPClient_1.put("configuration.dataset.onlySameHost", "false");
-				configuration_tHTTPClient_1.put("configuration.dataset.hasPagination", "false");
+				configuration_tHTTPClient_2.put("configuration.dataset.acceptRedirections", "true");
+				configuration_tHTTPClient_2.put("configuration.dataset.maxRedirectOnSameURL", "3");
+				configuration_tHTTPClient_2.put("configuration.dataset.onlySameHost", "false");
+				configuration_tHTTPClient_2.put("configuration.dataset.hasPagination", "false");
 				// configuration.dataset.pagination.preset is hidden, skipping.
 				// configuration.dataset.pagination.strategy is hidden, skipping.
 				// configuration.dataset.pagination.offsetLimitStrategyConfig.location is
@@ -1733,363 +1068,253 @@ public class getEnvironmentID implements TalendJob {
 				// hidden, skipping.
 				// configuration.dataset.pagination.offsetLimitStrategyConfig.elementsPath is
 				// hidden, skipping.
-				configuration_tHTTPClient_1.put("configuration.dataset.jsonForceDouble", "true");
+				configuration_tHTTPClient_2.put("configuration.dataset.jsonForceDouble", "true");
 				// configuration.dataset.enforceNumberAsString is hidden, skipping.
-				configuration_tHTTPClient_1.put("configuration.uploadFiles", "false");
-				configuration_tHTTPClient_1.put("configuration.dieOnError", "false");
-				configuration_tHTTPClient_1.put("configuration.dataset.__version", "1");
-				configuration_tHTTPClient_1.put("configuration.dataset.datastore.__version", "1");
-				configuration_tHTTPClient_1.put("SCHEMA_FLOW[0]", "workspaceName");
-				configuration_tHTTPClient_1.put("SCHEMA_FLOW[1]", "workspaceID");
-				configuration_tHTTPClient_1.put("SCHEMA_FLOW[2]", "environmentName");
-				configuration_tHTTPClient_1.put("SCHEMA_FLOW[3]", "environmentID");
+				configuration_tHTTPClient_2.put("configuration.uploadFiles", "false");
+				configuration_tHTTPClient_2.put("configuration.dieOnError", "false");
+				configuration_tHTTPClient_2.put("configuration.dataset.__version", "1");
+				configuration_tHTTPClient_2.put("configuration.dataset.datastore.__version", "1");
+				configuration_tHTTPClient_2.put("SCHEMA_FLOW[0]", "workspaceName");
+				configuration_tHTTPClient_2.put("SCHEMA_FLOW[1]", "workspaceID");
+				configuration_tHTTPClient_2.put("SCHEMA_FLOW[2]", "environmentName");
+				configuration_tHTTPClient_2.put("SCHEMA_FLOW[3]", "environmentID");
 
-				final int chunkSize_tHTTPClient_1 = globalMap.containsKey("MAX_BATCH_SIZE_tHTTPClient_1")
-						? (Integer) globalMap.get("MAX_BATCH_SIZE_tHTTPClient_1")
+				final int chunkSize_tHTTPClient_2 = globalMap.containsKey("MAX_BATCH_SIZE_tHTTPClient_2")
+						? (Integer) globalMap.get("MAX_BATCH_SIZE_tHTTPClient_2")
 						: 100;
 
-				final org.talend.sdk.component.runtime.output.Processor processorImpl_tHTTPClient_1 = mgr_tHTTPClient_1
-						.findProcessor("HTTP", "Client", 1, configuration_tHTTPClient_1)
+				final org.talend.sdk.component.runtime.output.Processor processorImpl_tHTTPClient_2 = mgr_tHTTPClient_2
+						.findProcessor("HTTP", "Client", 1, configuration_tHTTPClient_2)
 						.orElseThrow(() -> new IllegalArgumentException("Can't find HTTP#Client"));
 				org.talend.sdk.component.runtime.di.studio.RuntimeContextInjector.injectLifecycle(
-						processorImpl_tHTTPClient_1,
-						new org.talend.sdk.component.api.context.RuntimeContextHolder("tHTTPClient_1", globalMap));
+						processorImpl_tHTTPClient_2,
+						new org.talend.sdk.component.api.context.RuntimeContextHolder("tHTTPClient_2", globalMap));
 
-				final org.talend.sdk.component.runtime.di.studio.ParameterSetter changer_tHTTPClient_1 = new org.talend.sdk.component.runtime.di.studio.ParameterSetter(
-						processorImpl_tHTTPClient_1);
+				final org.talend.sdk.component.runtime.di.studio.ParameterSetter changer_tHTTPClient_2 = new org.talend.sdk.component.runtime.di.studio.ParameterSetter(
+						processorImpl_tHTTPClient_2);
 
-				final javax.json.bind.Jsonb jsonb_tHTTPClient_1 = (javax.json.bind.Jsonb) mgr_tHTTPClient_1
-						.findPlugin(processorImpl_tHTTPClient_1.plugin()).get()
+				final javax.json.bind.Jsonb jsonb_tHTTPClient_2 = (javax.json.bind.Jsonb) mgr_tHTTPClient_2
+						.findPlugin(processorImpl_tHTTPClient_2.plugin()).get()
 						.get(org.talend.sdk.component.runtime.manager.ComponentManager.AllServices.class).getServices()
 						.get(javax.json.bind.Jsonb.class);
 
-				final java.util.Map<Class<?>, Object> servicesMapper_tHTTPClient_1 = mgr_tHTTPClient_1
-						.findPlugin(processorImpl_tHTTPClient_1.plugin()).get()
+				final java.util.Map<Class<?>, Object> servicesMapper_tHTTPClient_2 = mgr_tHTTPClient_2
+						.findPlugin(processorImpl_tHTTPClient_2.plugin()).get()
 						.get(org.talend.sdk.component.runtime.manager.ComponentManager.AllServices.class).getServices();
 
-				final org.talend.sdk.component.runtime.di.AutoChunkProcessor processor_tHTTPClient_1 = new org.talend.sdk.component.runtime.di.AutoChunkProcessor(
-						chunkSize_tHTTPClient_1, processorImpl_tHTTPClient_1);
-				org.talend.sdk.component.runtime.di.JobStateAware.init(processorImpl_tHTTPClient_1, globalMap);
-				processor_tHTTPClient_1.start();
-				globalMap.put("processor_tHTTPClient_1", processor_tHTTPClient_1);
+				final org.talend.sdk.component.runtime.di.AutoChunkProcessor processor_tHTTPClient_2 = new org.talend.sdk.component.runtime.di.AutoChunkProcessor(
+						chunkSize_tHTTPClient_2, processorImpl_tHTTPClient_2);
+				org.talend.sdk.component.runtime.di.JobStateAware.init(processorImpl_tHTTPClient_2, globalMap);
+				processor_tHTTPClient_2.start();
+				globalMap.put("processor_tHTTPClient_2", processor_tHTTPClient_2);
 
-				int nbLineInput_tHTTPClient_1 = 0;
-				globalMap.put("tHTTPClient_1_NB_LINE", nbLineInput_tHTTPClient_1);
+				int nbLineInput_tHTTPClient_2 = 0;
+				globalMap.put("tHTTPClient_2_NB_LINE", nbLineInput_tHTTPClient_2);
 
-				final org.talend.sdk.component.runtime.di.InputsHandler inputsHandler_tHTTPClient_1 = new org.talend.sdk.component.runtime.di.InputsHandler(
-						jsonb_tHTTPClient_1, servicesMapper_tHTTPClient_1);
-				final org.talend.sdk.component.runtime.output.InputFactory inputs_tHTTPClient_1 = inputsHandler_tHTTPClient_1
+				final org.talend.sdk.component.runtime.di.InputsHandler inputsHandler_tHTTPClient_2 = new org.talend.sdk.component.runtime.di.InputsHandler(
+						jsonb_tHTTPClient_2, servicesMapper_tHTTPClient_2);
+				final org.talend.sdk.component.runtime.output.InputFactory inputs_tHTTPClient_2 = inputsHandler_tHTTPClient_2
 						.asInputFactory();
 
-				final org.talend.sdk.component.runtime.di.OutputsHandler outputHandler_tHTTPClient_1 = new org.talend.sdk.component.runtime.di.OutputsHandler(
-						jsonb_tHTTPClient_1, servicesMapper_tHTTPClient_1);
-				outputHandler_tHTTPClient_1.addConnection("FLOW", row1.getClass());
-				final org.talend.sdk.component.runtime.output.OutputFactory outputs_tHTTPClient_1 = outputHandler_tHTTPClient_1
+				final org.talend.sdk.component.runtime.di.OutputsHandler outputHandler_tHTTPClient_2 = new org.talend.sdk.component.runtime.di.OutputsHandler(
+						jsonb_tHTTPClient_2, servicesMapper_tHTTPClient_2);
+				outputHandler_tHTTPClient_2.addConnection("FLOW", row3.getClass());
+				final org.talend.sdk.component.runtime.output.OutputFactory outputs_tHTTPClient_2 = outputHandler_tHTTPClient_2
 						.asOutputFactory();
 
 				/**
-				 * [tHTTPClient_1 begin ] stop
+				 * [tHTTPClient_2 begin ] stop
 				 */
 
 				/**
-				 * [tHTTPClient_1 main ] start
+				 * [tHTTPClient_2 main ] start
 				 */
 
-				currentComponent = "tHTTPClient_1";
+				currentComponent = "tHTTPClient_2";
 
 				cLabel = "getIDs";
 
-				processor_tHTTPClient_1.onElement(inputs_tHTTPClient_1, outputs_tHTTPClient_1);
-				nbLineInput_tHTTPClient_1++;
-				globalMap.put("tHTTPClient_1_NB_LINE", nbLineInput_tHTTPClient_1);
+				processor_tHTTPClient_2.onElement(inputs_tHTTPClient_2, outputs_tHTTPClient_2);
+				nbLineInput_tHTTPClient_2++;
+				globalMap.put("tHTTPClient_2_NB_LINE", nbLineInput_tHTTPClient_2);
 
-				tos_count_tHTTPClient_1++;
+				tos_count_tHTTPClient_2++;
 
 				/**
-				 * [tHTTPClient_1 main ] stop
+				 * [tHTTPClient_2 main ] stop
 				 */
 
 				/**
-				 * [tHTTPClient_1 process_data_begin ] start
+				 * [tHTTPClient_2 process_data_begin ] start
 				 */
 
-				currentComponent = "tHTTPClient_1";
+				currentComponent = "tHTTPClient_2";
 
 				cLabel = "getIDs";
 
-				while (outputHandler_tHTTPClient_1.hasMoreData()) {
-					row1 = outputHandler_tHTTPClient_1.getValue("FLOW");
+				while (outputHandler_tHTTPClient_2.hasMoreData()) {
+					row3 = outputHandler_tHTTPClient_2.getValue("FLOW");
 
 					/**
-					 * [tHTTPClient_1 process_data_begin ] stop
+					 * [tHTTPClient_2 process_data_begin ] stop
 					 */
 
 					/**
-					 * [tFilterRow_1 main ] start
+					 * [tLogRow_2 main ] start
 					 */
 
-					currentComponent = "tFilterRow_1";
-
-					cLabel = "filterWorkspace";
+					currentComponent = "tLogRow_2";
 
 					if (runStat.update(execStat, enableLogStash, iterateId, 1, 1
 
-							, "row1", "tHTTPClient_1", "getIDs", "HTTPClient", "tFilterRow_1", "filterWorkspace",
-							"tFilterRow"
+							, "row3", "tHTTPClient_2", "getIDs", "HTTPClient", "tLogRow_2", "tLogRow_2", "tLogRow"
 
 					)) {
 						talendJobLogProcess(globalMap);
 					}
 
 					if (log.isTraceEnabled()) {
-						log.trace("row1 - " + (row1 == null ? "" : row1.toLogString()));
+						log.trace("row3 - " + (row3 == null ? "" : row3.toLogString()));
 					}
-
-					row2 = null;
-					Operator_tFilterRow_1 ope_tFilterRow_1 = new Operator_tFilterRow_1("&&");
-					ope_tFilterRow_1.matches(
-							(row1.environmentName == null ? false
-									: row1.environmentName.toUpperCase().compareTo("DEV") == 0),
-							" environmentName.toUpperCase().compareTo(\"DEV\") == 0 failed");
-					ope_tFilterRow_1.matches(
-							(row1.workspaceName == null ? false
-									: row1.workspaceName.toUpperCase().compareTo("CLOUD_RUN") == 0),
-							" workspaceName.toUpperCase().compareTo(\"CLOUD_RUN\") == 0 failed");
-
-					if (ope_tFilterRow_1.getMatchFlag()) {
-						if (row2 == null) {
-							row2 = new row2Struct();
-						}
-						row2.workspaceName = row1.workspaceName;
-						row2.workspaceID = row1.workspaceID;
-						row2.environmentName = row1.environmentName;
-						row2.environmentID = row1.environmentID;
-						log.debug("tFilterRow_1 - Process the record " + (nb_line_tFilterRow_1 + 1) + ".");
-
-						nb_line_ok_tFilterRow_1++;
-					} else {
-						nb_line_reject_tFilterRow_1++;
-					}
-
-					nb_line_tFilterRow_1++;
-
-					tos_count_tFilterRow_1++;
-
-					/**
-					 * [tFilterRow_1 main ] stop
-					 */
-
-					/**
-					 * [tFilterRow_1 process_data_begin ] start
-					 */
-
-					currentComponent = "tFilterRow_1";
-
-					cLabel = "filterWorkspace";
-
-					/**
-					 * [tFilterRow_1 process_data_begin ] stop
-					 */
-// Start of branch "row2"
-					if (row2 != null) {
-
-						/**
-						 * [tLogRow_1 main ] start
-						 */
-
-						currentComponent = "tLogRow_1";
-
-						if (runStat.update(execStat, enableLogStash, iterateId, 1, 1
-
-								, "row2", "tFilterRow_1", "filterWorkspace", "tFilterRow", "tLogRow_1", "tLogRow_1",
-								"tLogRow"
-
-						)) {
-							talendJobLogProcess(globalMap);
-						}
-
-						if (log.isTraceEnabled()) {
-							log.trace("row2 - " + (row2 == null ? "" : row2.toLogString()));
-						}
 
 ///////////////////////		
 
-						String[] row_tLogRow_1 = new String[4];
+					strBuffer_tLogRow_2 = new StringBuilder();
 
-						if (row2.workspaceName != null) { //
-							row_tLogRow_1[0] = String.valueOf(row2.workspaceName);
+					if (row3.workspaceName != null) { //
 
-						} //
+						strBuffer_tLogRow_2.append(String.valueOf(row3.workspaceName));
 
-						if (row2.workspaceID != null) { //
-							row_tLogRow_1[1] = String.valueOf(row2.workspaceID);
+					} //
 
-						} //
+					strBuffer_tLogRow_2.append("|");
 
-						if (row2.environmentName != null) { //
-							row_tLogRow_1[2] = String.valueOf(row2.environmentName);
+					if (row3.workspaceID != null) { //
 
-						} //
+						strBuffer_tLogRow_2.append(String.valueOf(row3.workspaceID));
 
-						if (row2.environmentID != null) { //
-							row_tLogRow_1[3] = String.valueOf(row2.environmentID);
+					} //
 
-						} //
+					strBuffer_tLogRow_2.append("|");
 
-						util_tLogRow_1.addRow(row_tLogRow_1);
-						nb_line_tLogRow_1++;
-						log.info("tLogRow_1 - Content of row " + nb_line_tLogRow_1 + ": "
-								+ TalendString.unionString("|", row_tLogRow_1));
+					if (row3.environmentName != null) { //
+
+						strBuffer_tLogRow_2.append(String.valueOf(row3.environmentName));
+
+					} //
+
+					strBuffer_tLogRow_2.append("|");
+
+					if (row3.environmentID != null) { //
+
+						strBuffer_tLogRow_2.append(String.valueOf(row3.environmentID));
+
+					} //
+
+					if (globalMap.get("tLogRow_CONSOLE") != null) {
+						consoleOut_tLogRow_2 = (java.io.PrintStream) globalMap.get("tLogRow_CONSOLE");
+					} else {
+						consoleOut_tLogRow_2 = new java.io.PrintStream(new java.io.BufferedOutputStream(System.out));
+						globalMap.put("tLogRow_CONSOLE", consoleOut_tLogRow_2);
+					}
+					log.info("tLogRow_2 - Content of row " + (nb_line_tLogRow_2 + 1) + ": "
+							+ strBuffer_tLogRow_2.toString());
+					consoleOut_tLogRow_2.println(strBuffer_tLogRow_2.toString());
+					consoleOut_tLogRow_2.flush();
+					nb_line_tLogRow_2++;
 //////
 
 //////                    
 
 ///////////////////////    			
 
-						tos_count_tLogRow_1++;
-
-						/**
-						 * [tLogRow_1 main ] stop
-						 */
-
-						/**
-						 * [tLogRow_1 process_data_begin ] start
-						 */
-
-						currentComponent = "tLogRow_1";
-
-						/**
-						 * [tLogRow_1 process_data_begin ] stop
-						 */
-
-						/**
-						 * [tLogRow_1 process_data_end ] start
-						 */
-
-						currentComponent = "tLogRow_1";
-
-						/**
-						 * [tLogRow_1 process_data_end ] stop
-						 */
-
-					} // End of branch "row2"
+					tos_count_tLogRow_2++;
 
 					/**
-					 * [tFilterRow_1 process_data_end ] start
-					 */
-
-					currentComponent = "tFilterRow_1";
-
-					cLabel = "filterWorkspace";
-
-					/**
-					 * [tFilterRow_1 process_data_end ] stop
+					 * [tLogRow_2 main ] stop
 					 */
 
 					/**
-					 * [tHTTPClient_1 process_data_end ] start
+					 * [tLogRow_2 process_data_begin ] start
 					 */
 
-					currentComponent = "tHTTPClient_1";
+					currentComponent = "tLogRow_2";
+
+					/**
+					 * [tLogRow_2 process_data_begin ] stop
+					 */
+
+					/**
+					 * [tLogRow_2 process_data_end ] start
+					 */
+
+					currentComponent = "tLogRow_2";
+
+					/**
+					 * [tLogRow_2 process_data_end ] stop
+					 */
+
+					/**
+					 * [tHTTPClient_2 process_data_end ] start
+					 */
+
+					currentComponent = "tHTTPClient_2";
 
 					cLabel = "getIDs";
 
 				} // End of data
 
 				/**
-				 * [tHTTPClient_1 process_data_end ] stop
+				 * [tHTTPClient_2 process_data_end ] stop
 				 */
 
 				/**
-				 * [tHTTPClient_1 end ] start
+				 * [tHTTPClient_2 end ] start
 				 */
 
-				currentComponent = "tHTTPClient_1";
+				currentComponent = "tHTTPClient_2";
 
 				cLabel = "getIDs";
 
-				globalMap.put("tHTTPClient_1_NB_LINE", nbLineInput_tHTTPClient_1);
+				globalMap.put("tHTTPClient_2_NB_LINE", nbLineInput_tHTTPClient_2);
 
 				if (log.isDebugEnabled())
-					log.debug("tHTTPClient_1 - " + ("Done."));
+					log.debug("tHTTPClient_2 - " + ("Done."));
 
-				ok_Hash.put("tHTTPClient_1", true);
-				end_Hash.put("tHTTPClient_1", System.currentTimeMillis());
+				ok_Hash.put("tHTTPClient_2", true);
+				end_Hash.put("tHTTPClient_2", System.currentTimeMillis());
 
 				/**
-				 * [tHTTPClient_1 end ] stop
+				 * [tHTTPClient_2 end ] stop
 				 */
 
 				/**
-				 * [tFilterRow_1 end ] start
+				 * [tLogRow_2 end ] start
 				 */
 
-				currentComponent = "tFilterRow_1";
-
-				cLabel = "filterWorkspace";
-
-				globalMap.put("tFilterRow_1_NB_LINE", nb_line_tFilterRow_1);
-				globalMap.put("tFilterRow_1_NB_LINE_OK", nb_line_ok_tFilterRow_1);
-				globalMap.put("tFilterRow_1_NB_LINE_REJECT", nb_line_reject_tFilterRow_1);
-
-				log.info("tFilterRow_1 - Processed records count:" + nb_line_tFilterRow_1 + ". Matched records count:"
-						+ nb_line_ok_tFilterRow_1 + ". Rejected records count:" + nb_line_reject_tFilterRow_1 + ".");
-
-				if (runStat.updateStatAndLog(execStat, enableLogStash, resourceMap, iterateId, "row1", 2, 0,
-						"tHTTPClient_1", "getIDs", "HTTPClient", "tFilterRow_1", "filterWorkspace", "tFilterRow",
-						"output")) {
-					talendJobLogProcess(globalMap);
-				}
-
-				if (log.isDebugEnabled())
-					log.debug("tFilterRow_1 - " + ("Done."));
-
-				ok_Hash.put("tFilterRow_1", true);
-				end_Hash.put("tFilterRow_1", System.currentTimeMillis());
-
-				/**
-				 * [tFilterRow_1 end ] stop
-				 */
-
-				/**
-				 * [tLogRow_1 end ] start
-				 */
-
-				currentComponent = "tLogRow_1";
+				currentComponent = "tLogRow_2";
 
 //////
-
-				java.io.PrintStream consoleOut_tLogRow_1 = null;
-				if (globalMap.get("tLogRow_CONSOLE") != null) {
-					consoleOut_tLogRow_1 = (java.io.PrintStream) globalMap.get("tLogRow_CONSOLE");
-				} else {
-					consoleOut_tLogRow_1 = new java.io.PrintStream(new java.io.BufferedOutputStream(System.out));
-					globalMap.put("tLogRow_CONSOLE", consoleOut_tLogRow_1);
-				}
-
-				consoleOut_tLogRow_1.println(util_tLogRow_1.format().toString());
-				consoleOut_tLogRow_1.flush();
 //////
-				globalMap.put("tLogRow_1_NB_LINE", nb_line_tLogRow_1);
+				globalMap.put("tLogRow_2_NB_LINE", nb_line_tLogRow_2);
 				if (log.isInfoEnabled())
-					log.info("tLogRow_1 - " + ("Printed row count: ") + (nb_line_tLogRow_1) + ("."));
+					log.info("tLogRow_2 - " + ("Printed row count: ") + (nb_line_tLogRow_2) + ("."));
 
 ///////////////////////    			
 
-				if (runStat.updateStatAndLog(execStat, enableLogStash, resourceMap, iterateId, "row2", 2, 0,
-						"tFilterRow_1", "filterWorkspace", "tFilterRow", "tLogRow_1", "tLogRow_1", "tLogRow",
-						"output")) {
+				if (runStat.updateStatAndLog(execStat, enableLogStash, resourceMap, iterateId, "row3", 2, 0,
+						"tHTTPClient_2", "getIDs", "HTTPClient", "tLogRow_2", "tLogRow_2", "tLogRow", "output")) {
 					talendJobLogProcess(globalMap);
 				}
 
 				if (log.isDebugEnabled())
-					log.debug("tLogRow_1 - " + ("Done."));
+					log.debug("tLogRow_2 - " + ("Done."));
 
-				ok_Hash.put("tLogRow_1", true);
-				end_Hash.put("tLogRow_1", System.currentTimeMillis());
+				ok_Hash.put("tLogRow_2", true);
+				end_Hash.put("tLogRow_2", System.currentTimeMillis());
 
 				/**
-				 * [tLogRow_1 end ] stop
+				 * [tLogRow_2 end ] stop
 				 */
 
 			} // end the resume
@@ -2113,47 +1338,35 @@ public class getEnvironmentID implements TalendJob {
 			try {
 
 				/**
-				 * [tHTTPClient_1 finally ] start
+				 * [tHTTPClient_2 finally ] start
 				 */
 
-				currentComponent = "tHTTPClient_1";
+				currentComponent = "tHTTPClient_2";
 
 				cLabel = "getIDs";
 
-				final org.talend.sdk.component.runtime.di.AutoChunkProcessor processor_tHTTPClient_1 = org.talend.sdk.component.runtime.di.AutoChunkProcessor.class
-						.cast(globalMap.remove("processor_tHTTPClient_1"));
+				final org.talend.sdk.component.runtime.di.AutoChunkProcessor processor_tHTTPClient_2 = org.talend.sdk.component.runtime.di.AutoChunkProcessor.class
+						.cast(globalMap.remove("processor_tHTTPClient_2"));
 				try {
-					if (processor_tHTTPClient_1 != null) {
-						processor_tHTTPClient_1.stop();
+					if (processor_tHTTPClient_2 != null) {
+						processor_tHTTPClient_2.stop();
 					}
 				} catch (final RuntimeException re) {
 					throw new TalendException(re, currentComponent, cLabel, globalMap);
 				}
 
 				/**
-				 * [tHTTPClient_1 finally ] stop
+				 * [tHTTPClient_2 finally ] stop
 				 */
 
 				/**
-				 * [tFilterRow_1 finally ] start
+				 * [tLogRow_2 finally ] start
 				 */
 
-				currentComponent = "tFilterRow_1";
-
-				cLabel = "filterWorkspace";
+				currentComponent = "tLogRow_2";
 
 				/**
-				 * [tFilterRow_1 finally ] stop
-				 */
-
-				/**
-				 * [tLogRow_1 finally ] start
-				 */
-
-				currentComponent = "tLogRow_1";
-
-				/**
-				 * [tLogRow_1 finally ] stop
+				 * [tLogRow_2 finally ] stop
 				 */
 
 			} catch (java.lang.Exception e) {
@@ -2164,7 +1377,7 @@ public class getEnvironmentID implements TalendJob {
 			resourceMap = null;
 		}
 
-		globalMap.put("tHTTPClient_1_SUBPROCESS_STATE", 1);
+		globalMap.put("tHTTPClient_2_SUBPROCESS_STATE", 1);
 	}
 
 	public void talendJobLogProcess(final java.util.Map<String, Object> globalMap) throws TalendException {
@@ -2174,7 +1387,7 @@ public class getEnvironmentID implements TalendJob {
 
 		mdcInfo.forEach(org.slf4j.MDC::put);
 		org.slf4j.MDC.put("_subJobName", "talendJobLog");
-		org.slf4j.MDC.put("_subJobPid", "JHQU22_" + subJobPidCounter.getAndIncrement());
+		org.slf4j.MDC.put("_subJobPid", "ghYudj_" + subJobPidCounter.getAndIncrement());
 
 		String iterateId = "";
 
@@ -2529,7 +1742,7 @@ public class getEnvironmentID implements TalendJob {
 		org.slf4j.MDC.put("_startTimestamp", java.time.ZonedDateTime.now(java.time.ZoneOffset.UTC)
 				.format(java.time.format.DateTimeFormatter.ISO_INSTANT));
 		org.slf4j.MDC.put("_jobRepositoryId", "_1hXIQLCHEe-kcMyE6M_qOg");
-		org.slf4j.MDC.put("_compiledAtTimestamp", "2024-12-02T08:42:54.409068600Z");
+		org.slf4j.MDC.put("_compiledAtTimestamp", "2024-12-02T08:46:46.765934Z");
 
 		java.lang.management.RuntimeMXBean mx = java.lang.management.ManagementFactory.getRuntimeMXBean();
 		String[] mxNameTable = mx.getName().split("@"); //$NON-NLS-1$
@@ -2718,14 +1931,14 @@ public class getEnvironmentID implements TalendJob {
 
 		try {
 			errorCode = null;
-			tHTTPClient_1Process(globalMap);
+			tHTTPClient_2Process(globalMap);
 			if (!"failure".equals(status)) {
 				status = "end";
 			}
-		} catch (TalendException e_tHTTPClient_1) {
-			globalMap.put("tHTTPClient_1_SUBPROCESS_STATE", -1);
+		} catch (TalendException e_tHTTPClient_2) {
+			globalMap.put("tHTTPClient_2_SUBPROCESS_STATE", -1);
 
-			e_tHTTPClient_1.printStackTrace();
+			e_tHTTPClient_2.printStackTrace();
 
 		}
 
@@ -2895,6 +2108,6 @@ public class getEnvironmentID implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 100034 characters generated by Talend Cloud Data Fabric on the December 2,
- * 2024 at 8:42:54 AM GMT
+ * 78224 characters generated by Talend Cloud Data Fabric on the December 2,
+ * 2024 at 8:46:46 AM GMT
  ************************************************************************************************/
