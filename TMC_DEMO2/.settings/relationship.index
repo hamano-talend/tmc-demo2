@@ -89,10 +89,6 @@
     "id" : "IpaasFileUtil",
     "version" : "Latest",
     "type" : "routine"
-  }, {
-    "id" : "MDM",
-    "version" : "Latest",
-    "type" : "routine"
   } ]
 }, {
   "baseItem" : {
@@ -120,10 +116,6 @@
     "id" : "DqStringHandling",
     "version" : "Latest",
     "type" : "routine"
-  }, {
-    "id" : "MDM",
-    "version" : "Latest",
-    "type" : "routine"
   } ]
 }, {
   "baseItem" : {
@@ -149,10 +141,6 @@
     "type" : "routine"
   }, {
     "id" : "DqStringHandling",
-    "version" : "Latest",
-    "type" : "routine"
-  }, {
-    "id" : "MDM",
     "version" : "Latest",
     "type" : "routine"
   } ]
