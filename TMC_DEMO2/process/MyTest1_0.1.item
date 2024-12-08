@@ -3,6 +3,7 @@
   <context confirmationNeeded="false" hide="false" name="Default">
     <contextParameter comment="Directory" name="dir" prompt="dir?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_T_d4ALU_Ee-pWZYJBvmgSw"/>
     <contextParameter comment="File Path" name="parameter_file_path" prompt="parameter_file_path?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_T_d4AbU_Ee-pWZYJBvmgSw"/>
+    <contextParameter comment="My File" name="resource_file_myfile" prompt="resource_file_myfile?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value="" internalId="_BVIqYLVAEe-pWZYJBvmgSw"/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
